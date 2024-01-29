@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers";
 import { cn } from "@/lib/utils";
 import NavigationBar from "@/components/modules/Navbar/Navbar";
+import Footer from "@/components/modules/Footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -12,7 +13,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Faizanahmed",
+    default: "Faizanahmed | v8",
     template: "%s | Faizanahmed-v8",
   },
   description: "V8 Of My Portfolio",
@@ -40,6 +41,7 @@ export default function RootLayout({
         >
           <NavigationBar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

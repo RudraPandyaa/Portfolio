@@ -8,6 +8,10 @@ export function ThemeProvider({
   ...props
 }: {
   children: React.ReactNode;
+  attribute: string;
+  defaultTheme: string;
+  enableSystem: boolean;
+  disableTransitionOnChange: boolean;
 }) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
