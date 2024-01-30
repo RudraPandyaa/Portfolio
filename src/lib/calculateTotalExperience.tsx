@@ -33,12 +33,8 @@ export default function totalCorporateExperience() {
     "month"
   );
 
-  // console.log("totalExpInDevstreeinMonths", totalExpInDevstreeinMonths);
-
   //Including the current month in experience
   const devstreeExp = totalExpInDevstreeinMonths + 1;
-
-  // console.log("devstreeExp", devstreeExp);
 
   function addMonthsAndFormat(months1: any, months2: any) {
     const resultDate = dayjs().add(months1 + months2, "month");
