@@ -1,5 +1,6 @@
+"use client";
+
 import { UiWrapper } from "@/components/shared";
-import CardWrapper from "@/components/shared/CardWrapper";
 import {
   Card,
   CardDescription,
@@ -9,9 +10,19 @@ import {
 import totalCorporateExperience from "@/lib/calculateTotalExperience";
 
 import dayjs from "dayjs";
+import { use, useEffect, useState } from "react";
 
 const BentoGrid = () => {
-  const totalExpText = totalCorporateExperience();
+  const [totalExpText, setTotalExpText] = useState("");
+
+  useEffect(() => {
+    const calculateTotalExperience = async () => {
+      const totalExperience = await totalCorporateExperience();
+      setTotalExpText(totalExperience);
+    };
+
+    calculateTotalExperience();
+  }, []);
 
   return (
     <UiWrapper>
