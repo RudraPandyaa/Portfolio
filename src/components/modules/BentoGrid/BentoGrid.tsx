@@ -1,9 +1,11 @@
+import { UiWrapper } from "@/components/shared";
+import CardWrapper from "@/components/shared/CardWrapper";
 import { Card } from "@/components/ui/card";
 
 const BentoGrid = () => {
   return (
-    <div className="mx-20 m-3">
-      <div className="grid grid-cols-3 gap-4 ">
+    <UiWrapper>
+      <div className="grid grid-cols-3 gap-4">
         <div className="col-span-2">
           <Card className="w-full h-full">
             <div className="p-10">
@@ -41,7 +43,7 @@ const BentoGrid = () => {
           </Card>
         </div>
       </div>
-    </div>
+    </UiWrapper>
   );
 };
 
