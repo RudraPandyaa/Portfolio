@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <UiWrapper>
       <Card>
-        {" "}
         <footer className=" px-5 py-4 text-center text-zinc-500">
           <div className="container mx-auto">
             {/* <div className="flex flex-wrap justify-center">
