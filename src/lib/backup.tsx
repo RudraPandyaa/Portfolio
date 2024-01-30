@@ -99,3 +99,14 @@
 
 //   return `Total of ${resp} of experience in Corporate`;
 // }
+
+// ---------------------------
+
+// useEffect(() => {
+//   const calculateTotalExperience = async () => {
+//     const totalExperience = await totalCorporateExperience();
+//     setTotalExpText(totalExperience);
+//   };
+
+//   calculateTotalExperience();
+// }, []);

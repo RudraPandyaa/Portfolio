@@ -10,19 +10,29 @@ import {
 import totalCorporateExperience from "@/lib/calculateTotalExperience";
 
 import dayjs from "dayjs";
-import { use, useEffect, useState } from "react";
+import { use, useEffect, useMemo, useState } from "react";
 
 const BentoGrid = () => {
-  const [totalExpText, setTotalExpText] = useState("");
+  const [totalExpText, setTotalExpText] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const memoizedTotalExperience = useMemo(async () => {
+    return await totalCorporateExperience();
+  }, []);
 
   useEffect(() => {
-    const calculateTotalExperience = async () => {
-      const totalExperience = await totalCorporateExperience();
-      setTotalExpText(totalExperience);
+    const updateTotalExpText = async () => {
+      try {
+        setIsLoading(true);
+        const result = await memoizedTotalExperience;
+        setTotalExpText(result);
+      } finally {
+        setIsLoading(false);
+      }
     };
 
-    calculateTotalExperience();
-  }, []);
+    updateTotalExpText();
+  }, [memoizedTotalExperience]);
 
   return (
     <UiWrapper>
@@ -32,7 +42,10 @@ const BentoGrid = () => {
           <Card className="w-full h-full">
             <CardHeader className="text-center">
               <CardTitle>Experience</CardTitle>
-              <CardDescription>{totalExpText}</CardDescription>
+              <CardDescription>
+                {" "}
+                {isLoading ? "Loading..." : totalExpText}
+              </CardDescription>
             </CardHeader>
             <div className="grid grid-cols-2 gap-4 px-6 pb-4">
               <Card className="px-2 py-5">
