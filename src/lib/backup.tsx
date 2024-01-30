@@ -29,4 +29,12 @@
             n
           </span>
         </h1> */
+  // const currentDate = new Date();
+  // const startDate = new Date("April 2023");
+  // const monthsDiff =
+  //   (currentDate.getFullYear() - startDate.getFullYear()) * 12 +
+  //   currentDate.getMonth() -
+  //   startDate.getMonth();
+  // const years = Math.floor(monthsDiff / 12);
+  // const remainingMonths = monthsDiff % 12;
 }
