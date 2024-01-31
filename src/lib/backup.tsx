@@ -110,3 +110,34 @@
 
 //   calculateTotalExperience();
 // }, []);
+
+// ---------------------------------------
+
+{
+  /* <UiWrapper>
+        <div className="grid grid-cols-2 gap-4 ">
+          <Card className="px-2 py-5">
+            <CardTitle
+              className="px-2 py-2
+                "
+            >
+              Devstree It Services
+            </CardTitle>
+            <CardDescription className="px-2 py-2">
+              Jr Software Developer | April 2023 - Present <br />
+            </CardDescription>
+          </Card>
+          <Card className="px-2 py-5">
+            <CardTitle
+              className="px-2 py-2
+                "
+            >
+              Viji Foods
+            </CardTitle>
+            <CardDescription className="px-2 py-2">
+              Customer Service Team Lead | Jan 2022 - Nov 2022 <br />
+            </CardDescription>
+          </Card>
+        </div>
+      </UiWrapper> */
+}
