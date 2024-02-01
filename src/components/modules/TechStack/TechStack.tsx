@@ -4,11 +4,24 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 
 import { UiWrapper } from "@/components/shared";
-import { Card } from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
+import { Icon } from "@iconify-icon/react";
 
 const TechStack = () => {
-  const ref3 = useRef(null);
-  const isInView = useInView(ref3, { once: false });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  const langIconSize = {
+    fontSize: "70px",
+  };
+
+  const frameWorkIconSize = {
+    fontSize: "70px",
+  };
+
+  const libraryIconSize = {
+    fontSize: "66px",
+  };
 
   const techStack = [
     "TypeScript",
@@ -22,7 +35,7 @@ const TechStack = () => {
   return (
     <UiWrapper>
       <motion.div
-        ref={ref3}
+        ref={ref}
         initial={{
           opacity: 0,
           y: 100,
@@ -38,7 +51,7 @@ const TechStack = () => {
         }}
         className="text-center text-2xl font-bold"
       >
-        <Card>
+        {/* <Card>
           <div className="p-10 grid grid-cols-6 gap-4">
             {techStack.map((tech, index) => (
               <div className="col-span-1" key={index}>
@@ -48,7 +61,47 @@ const TechStack = () => {
               </div>
             ))}
           </div>
-        </Card>
+        </Card> */}
+        <div className="h-full my-5 grid grid-cols-3 gap-4">
+          <Card className="p-5">
+            <CardTitle>Languages</CardTitle>
+            <div
+              className="p-5 flex justify-center gap-5
+            "
+            >
+              <Icon icon="skill-icons:typescript" style={langIconSize} />
+              <Icon icon="skill-icons:javascript" style={langIconSize} />
+              <Icon icon="skill-icons:java-dark" style={langIconSize} />
+              <div className="bg-zinc-900 rounded-2xl h-[4.2rem]">
+                <Icon icon="mdi:language-c" style={langIconSize} />
+              </div>
+            </div>
+          </Card>
+          <Card className="p-5">
+            <CardTitle>Frameworks</CardTitle>
+            <div
+              className="p-5 flex justify-center gap-5
+            "
+            >
+              <Icon icon="devicon:nextjs" style={frameWorkIconSize} />
+              <Icon icon="logos:react" style={frameWorkIconSize} />
+              <Icon icon="logos:ionic-icon" style={frameWorkIconSize} />
+              <Icon icon="devicon:svelte" style={frameWorkIconSize} />
+            </div>
+          </Card>
+          <Card className="p-5">
+            <CardTitle>Libraries</CardTitle>
+            <div
+              className="p-5 flex justify-center gap-5
+            "
+            >
+              <Icon icon="logos:ant-design" style={libraryIconSize} />
+              <Icon icon="simple-icons:shadcnui" style={libraryIconSize} />
+              <Icon icon="devicon:tailwindcss" style={libraryIconSize} />
+              <Icon icon="simple-icons:mui" style={libraryIconSize} />
+            </div>
+          </Card>
+        </div>
       </motion.div>
     </UiWrapper>
   );

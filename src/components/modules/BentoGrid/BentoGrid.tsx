@@ -71,9 +71,9 @@ const BentoGrid = () => {
                 </CardDescription>
               </CardHeader>
               <div className="grid grid-cols-2 gap-4 px-6 pb-4">
-                <Card className="px-2 py-5">
+                <Card className="px-2 py-5 bg-[#006966]">
                   <CardTitle
-                    className="px-2 py-2
+                    className="px-2 py-2 
                 "
                   >
                     {/* <ScrollAnimatedText text="Devstree IT Services" /> */}
@@ -83,9 +83,9 @@ const BentoGrid = () => {
                     Jr Software Developer | April 2023 - Present <br />
                   </CardDescription>
                 </Card>
-                <Card className="px-2 py-5">
+                <Card className="px-2 py-5 bg-[#482C3C]">
                   <CardTitle
-                    className="px-2 py-2
+                    className="px-2 py-2 
                 "
                   >
                     {/* <ScrollAnimatedText text="Viji Foods" /> */}
