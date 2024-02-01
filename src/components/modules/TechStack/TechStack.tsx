@@ -62,7 +62,7 @@ const TechStack = () => {
             ))}
           </div>
         </Card> */}
-        <div className="h-full my-5 grid grid-cols-3 gap-4">
+        <div className="h-full grid grid-cols-3 gap-4">
           <Card className="p-5">
             <CardTitle>Languages</CardTitle>
             <div
