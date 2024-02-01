@@ -8,19 +8,25 @@ import { Switch } from "./ui/switch";
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [isThemeDark, setIsThemeDark] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
 
   useEffect(() => {
-    const checkTheSystemThemeIsDark =
-      document.documentElement.classList.contains("dark");
+    // ENABLE THIS IF YOU WANT TO USE SYSTEM THEME AS DEFAULT
 
-    if (checkTheSystemThemeIsDark) {
-      setChecked(true);
-      setIsThemeDark(true);
-    } else {
-      setIsThemeDark(false);
-      setChecked(false);
-    }
+    // const checkTheSystemThemeIsDark =
+    //   document.documentElement.classList.contains("dark");
+
+    // if (checkTheSystemThemeIsDark) {
+    //   setChecked(true);
+    //   setIsThemeDark(true);
+    // } else {
+    //   setIsThemeDark(false);
+    //   setChecked(false);
+    // }
+
+    //THEME SHOULD BE DARK BY DEFAULT
+    setTheme("dark");
+    setChecked(true);
   }, []);
 
   return (
