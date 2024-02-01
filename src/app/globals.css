@@ -73,9 +73,9 @@
   body {
     @apply bg-background text-foreground;
   }
-  html {
+  /* html {
     @apply antialiased scroll-smooth;
-  }
+  } */
 }
 
 /* Works on Chrome, Edge, and Safari */

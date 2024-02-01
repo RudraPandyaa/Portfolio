@@ -1,19 +1,22 @@
 import React from "react";
 import { ThemeToggle } from "../../dark-mode-toggle";
 import { Card } from "@/components/ui/card";
+import { UiWrapper } from "@/components/shared";
 
 const NavigationBar = () => {
   return (
-    <Card className="rounded-xl px-10  mx-20 my-3">
-      <nav className="flex justify-between px-10 py-5 sticky  ">
-        <div className="font-mono">portfolio-v8</div>
-        <div>
+    <UiWrapper>
+      <Card className="rounded-xl xl:my-2 lg:my-2">
+        <nav className="flex justify-between px-10 py-5 sticky  ">
+          <div className="font-mono">portfolio-v8</div>
           <div>
-            <ThemeToggle />
+            <div>
+              <ThemeToggle />
+            </div>
           </div>
-        </div>
-      </nav>
-    </Card>
+        </nav>
+      </Card>
+    </UiWrapper>
   );
 };
 
