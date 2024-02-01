@@ -70,7 +70,12 @@ const BentoGrid = () => {
                   {isLoading ? "Loading..." : totalExpText}
                 </CardDescription>
               </CardHeader>
-              <div className="grid grid-cols-2 gap-4 px-6 pb-4">
+              <div
+                className="grid xl:grid-cols-2
+               lg:grid-cols-2  md:grid-cols-1
+               sm:grid-cols-1
+              gap-4 px-6 pb-4"
+              >
                 <Card className="px-2 py-5 bg-[#006966]">
                   <CardTitle
                     className="px-2 py-2 
