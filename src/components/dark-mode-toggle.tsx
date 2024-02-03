@@ -30,7 +30,7 @@ export function ThemeToggle() {
   }, []);
 
   return (
-    <div className="m-auto">
+    <div>
       <Switch
         aria-readonly
         checked={checked}
