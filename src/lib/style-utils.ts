@@ -1,1 +1,1 @@
-export const NAV_ICON_SIZE = 30;
+export const NAV_ICON_SIZE = 20;

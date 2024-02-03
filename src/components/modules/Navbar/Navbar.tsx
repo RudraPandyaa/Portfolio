@@ -7,6 +7,7 @@ import { FluentEmojiFlatGraduationCap } from "@/lib/icons/education";
 import { FluentEmojiFlatHouse } from "@/lib/icons/house";
 import { FluentEmojiFlatMemo } from "@/lib/icons/memo";
 import AlertNote from "./_components/AlertNote";
+import { Button } from "@/components/ui/button";
 
 const NavigationBar = () => {
   return (
@@ -29,11 +30,41 @@ const NavigationBar = () => {
             <span>menu</span>
           </div> */}
 
-            <div className="flex gap-x-20">
-              <div>
+            <div className="flex gap-x-10 items-center text-sm">
+              <Button variant={"ghost"} className="gap-2">
                 <FluentEmojiFlatHouse />
+                Home
+              </Button>
+              <Button variant={"ghost"} className="gap-2">
+                <FluentEmojiFlatGraduationCap />
+                <div>Education</div>
+              </Button>
+              <Button variant={"ghost"} className="gap-2">
+                <FluentEmojiFlatBriefcase />
+                <div>Work</div>
+              </Button>
+              <Button variant={"ghost"} className="gap-2">
+                <FluentEmojiFlatMemo />
+                <div>Blogs</div>
+              </Button>
+              {/* <div className="flex items-center gap-3">
+                <FluentEmojiFlatHouse />
+                <div>Home</div>
               </div>
-              <div>
+              <div className="flex items-center gap-3">
+                <FluentEmojiFlatGraduationCap />
+                <div>Education</div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <FluentEmojiFlatBriefcase />
+                <div>Work</div>
+              </div>
+              <div className="flex items-center gap-3">
+                <FluentEmojiFlatMemo />
+                <div>Blogs</div>
+              </div> */}
+              {/* <div>
                 <FluentEmojiFlatGraduationCap />
               </div>
               <div>
@@ -41,7 +72,7 @@ const NavigationBar = () => {
               </div>
               <div>
                 <FluentEmojiFlatMemo />
-              </div>
+              </div> */}
             </div>
 
             {/* <ul>
