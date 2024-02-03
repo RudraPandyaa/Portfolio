@@ -1,4 +1,4 @@
-import { NameCard, TechStack } from "@/components/modules";
+import { NameCard, OverView, TechStack } from "@/components/modules";
 
 export default function Home() {
   return (
@@ -6,6 +6,8 @@ export default function Home() {
       <NameCard />
 
       <TechStack />
+
+      <OverView />
     </>
   );
 }

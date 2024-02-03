@@ -4,8 +4,17 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 
 import { UiWrapper } from "@/components/shared";
-import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { collageData } from "@/constants/data";
+import { Button } from "@/components/ui/button";
+import { Dot, ExternalLink } from "lucide-react";
 
 const EducationCard: React.FC = () => {
   const ref2 = useRef(null);
@@ -30,59 +39,91 @@ const EducationCard: React.FC = () => {
         className="text-center text-2xl"
       >
         <div className="grid grid-cols-2 gap-4">
-          <Card>
-            <Card className="px-2 py-5">
-              <CardTitle
-                className="px-2 py-2
+          <div className="px-2 py-5">
+            <CardTitle
+              className="px-2 py-2
                 "
-              >
-                Skill Based Education
-              </CardTitle>
+            >
+              Skill Based Education
+            </CardTitle>
 
-              <Card className="px-2 py-5 mb-4">
-                <CardTitle
-                  className="px-2 py-2
-                "
-                >
-                  {/* MERN Stack Web Development Bootcamp by Angela Yu */}
-                  Lorem ipsum dolor sit.
+            <Card className="px-2 py-5 mb-4">
+              <CardHeader>
+                <CardTitle>
+                  <span className="text-amber-200"> Full Stack Web Dev </span> |
+                  Udemy
                 </CardTitle>
-                <CardDescription className="px-2 py-2">
-                  foo | April 2023 - Present <br />
-                </CardDescription>
-              </Card>
-              <Card className="px-2 py-5">
-                <CardTitle
-                  className="px-2 py-2
-                "
-                >
-                  Lorem ipsum dolor sit amet consectetur.
-                </CardTitle>
-                <CardDescription className="px-2 py-2">
-                  foo | April 2023 - Present <br />
-                </CardDescription>
-              </Card>
+                <CardDescription>By Angela Yu</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus ipsam voluptatibus suscipit natus impedit dolore
+                  repudiandae, odit molestiae animi aliquam eos dolorum cumque
+                  quasi itaque praesentium reiciendis rerum velit esse.
+                </p>
+              </CardContent>
+              <CardFooter>
+                <div className="flex justify-between w-full items-center text-sm">
+                  <div className="text-muted-foreground">View Course</div>
+                  <Button variant={"ghost"}>
+                    <ExternalLink size={20} />
+                  </Button>
+                </div>
+              </CardFooter>
             </Card>
-          </Card>
-          <Card className="px-2 py-5">
+          </div>
+
+          <div className="px-2 py-5 mb-4">
             <CardTitle
               className="px-2 py-2
                 "
             >
               Formal Education
             </CardTitle>
-            <CardDescription className="px-2 py-2">
-              {/* Bachelor of Technology in Information Technology | April 2023 -
-                Present <br /> */}
+            {/* <CardDescription className="px-2 py-2">
+            
             </CardDescription>
             <div className="flex flex-col justify-start items-start text-start pl-7">
-              <p>{collageData.collage}</p>
+              <div className="flex justify-center items-center">
+                <div className="rounded-full w-2 h-2 bg-sky-300 mr-3"></div>
+
+                <div>{collageData.collage}</div>
+              </div>
               <p className="text-sm text-zinc-400">{collageData.degree}</p>
               <p className="text-sm text-zinc-500">
                 {collageData.startDate} - {collageData.endDate}
               </p>
-            </div>
-          </Card>
+            </div> */}
+            <Card className="px-2 py-5">
+              <CardHeader>
+                <CardTitle>
+                  <span className="text-teal-200"> Btech IT</span> |{" "}
+                  {collageData.collage}
+                </CardTitle>
+                <CardDescription>{collageData.degree}</CardDescription>
+                <CardDescription>
+                  {collageData.startDate} - {collageData.endDate}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus ipsam voluptatibus suscipit natus impedit dolore
+                  repudiandae, odit molestiae animi aliquam eos dolorum cumque
+                  quasi itaque praesentium reiciendis rerum velit esse.
+                </p>
+              </CardContent>
+              <CardFooter>
+                <div className="flex justify-between w-full items-center text-sm">
+                  <div className="text-muted-foreground">View Course</div>
+                  <Button variant={"ghost"}>
+                    <ExternalLink size={20} />
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+          </div>
         </div>
       </motion.div>
     </UiWrapper>
