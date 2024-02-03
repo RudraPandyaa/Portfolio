@@ -20,7 +20,7 @@ const NavigationBar = () => {
           <nav className="flex justify-between items-center px-10 py-5">
             <div className="font-mono w-[150px]">portfolio-v8</div>
 
-            <div className="flex gap-x-10 items-center text-sm">
+            <div className="xl:flex lg:flex md:flex hidden  gap-x-10 items-center text-sm">
               {navLinks.map((link, index) => (
                 <NavLinks
                   key={index}
