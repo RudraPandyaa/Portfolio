@@ -64,7 +64,7 @@ const TechStack = () => {
         </Card> */}
         <div className="h-full grid xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-14">
           <Card className="p-5">
-            <CardTitle>Languages</CardTitle>
+            <CardTitle className="text-rose-50">Languages</CardTitle>
             <div
               className="p-5 flex justify-center gap-5
             "
@@ -78,7 +78,7 @@ const TechStack = () => {
             </div>
           </Card>
           <Card className="p-5">
-            <CardTitle>Frameworks</CardTitle>
+            <CardTitle className="text-green-100">Frameworks</CardTitle>
             <div
               className="p-5 flex justify-center gap-5
             "
@@ -90,7 +90,7 @@ const TechStack = () => {
             </div>
           </Card>
           <Card className="p-5">
-            <CardTitle>Libraries</CardTitle>
+            <CardTitle className="text-lime-50">Libraries</CardTitle>
             <div
               className="p-5 flex justify-center gap-5
             "
