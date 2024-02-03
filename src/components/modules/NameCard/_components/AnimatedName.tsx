@@ -3,10 +3,14 @@
 import { motion } from "framer-motion";
 
 const AnimatedName = () => {
+  const pretext = "Hey I am ";
   const text = "F a i z a n a h m e d".split(" ");
 
   return (
     <div className="flex">
+      {/* <span>
+        {pretext} <br />{" "}
+      </span>{" "} */}
       {text.map((el, i) => (
         <motion.span
           initial={{ opacity: 0 }}

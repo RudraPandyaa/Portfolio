@@ -17,7 +17,7 @@ const AlertNote = () => {
           alt=""
         />
 
-        <div>Light Mode is work in progress</div>
+        <div>Light Mode is work in progress | Please switch to dark mode</div>
       </Card>
     </div>
   );

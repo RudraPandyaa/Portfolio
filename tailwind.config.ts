@@ -88,11 +88,17 @@ const config = {
           from: { opacity: "0", transform: "translateY(-30px)" },
           to: { opacity: "1", transform: "none" },
         },
+        "reverse-fade-in": {
+          from: { opacity: "0", transform: "translateY(30px)" },
+          to: { opacity: "1", transform: "none" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 1000ms var(--ani-delay, 0ms) ease-out forwards",
+        "reverse-fade-in":
+          "reverse-fade-in 1000ms var(--ani-delay, 0ms) ease-out forwards",
       },
     },
   },
