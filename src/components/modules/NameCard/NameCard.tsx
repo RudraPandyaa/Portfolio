@@ -5,6 +5,23 @@ import styles from "./NameCard.module.css";
 import { FluentEmojiFlatWavingHand } from "@/lib/icons/hey-icon";
 
 const NameCard = () => {
+  const getGreeting = () => {
+    const time = new Date().getHours();
+    // const time = 4;
+
+    console.log("time", time);
+
+    if (time < 12) {
+      return "Morning";
+    } else if (time < 18) {
+      return "Afternoon";
+    } else {
+      return "Evening";
+    }
+  };
+
+  const greeting = getGreeting();
+
   return (
     <UiWrapper>
       <div className="overflow-hidden">
@@ -13,7 +30,7 @@ const NameCard = () => {
             <div>
               <FluentEmojiFlatWavingHand />
             </div>
-            <div>Hey I am</div>
+            <div>Hey, Good {greeting}</div>
           </h2>
           <h1 className="flex font-bold text-center text-4xl  sm:text-4xl xl:text-6xl md:text-5xl lg:text-5xl  animate-fade-in [--ani-delay:200ms] opacity-0 translate-y-[-1rem]">
             <AnimatedName />
