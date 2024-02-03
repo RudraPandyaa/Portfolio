@@ -8,6 +8,8 @@ import { FluentEmojiFlatHouse } from "@/lib/icons/house";
 import { FluentEmojiFlatMemo } from "@/lib/icons/memo";
 import AlertNote from "./_components/AlertNote";
 import { Button } from "@/components/ui/button";
+import { navLinks } from "@/constants/nav-links";
+import NavLinks from "./_components/NavLinks";
 
 const NavigationBar = () => {
   return (
@@ -18,68 +20,33 @@ const NavigationBar = () => {
           <nav className="flex justify-between items-center px-10 py-5">
             <div className="font-mono w-[150px]">portfolio-v8</div>
 
-            {/* <div className="flex  gap-7 justify-center text-center items-center">
-            <div className="font-mono">menu</div>
-            <div className="font-mono">menu</div>
-            <div className="font-mono">menu</div>
-          </div> */}
-
-            {/* <div>
-            <span>menu</span>
-            <span>menu</span>
-            <span>menu</span>
-          </div> */}
-
             <div className="flex gap-x-10 items-center text-sm">
-              <Button variant={"ghost"} className="gap-2">
-                <FluentEmojiFlatHouse />
-                Home
-              </Button>
-              <Button variant={"ghost"} className="gap-2">
-                <FluentEmojiFlatGraduationCap />
-                <div>Education</div>
-              </Button>
-              <Button variant={"ghost"} className="gap-2">
-                <FluentEmojiFlatBriefcase />
-                <div>Work</div>
-              </Button>
-              <Button variant={"ghost"} className="gap-2">
-                <FluentEmojiFlatMemo />
-                <div>Blogs</div>
-              </Button>
-              {/* <div className="flex items-center gap-3">
+              {navLinks.map((link, index) => (
+                <NavLinks
+                  key={index}
+                  icon={link.icon}
+                  href={link.href}
+                  text={link.text}
+                />
+              ))}
+
+              {/* <Button variant={"active"} className="gap-2">
                 <FluentEmojiFlatHouse />
                 <div>Home</div>
-              </div>
-              <div className="flex items-center gap-3">
+              </Button>
+              <Button variant={"ghost"} className="gap-2">
                 <FluentEmojiFlatGraduationCap />
                 <div>Education</div>
-              </div>
-
-              <div className="flex items-center gap-3">
+              </Button>
+              <Button variant={"ghost"} className="gap-2">
                 <FluentEmojiFlatBriefcase />
                 <div>Work</div>
-              </div>
-              <div className="flex items-center gap-3">
+              </Button>
+              <Button variant={"ghost"} className="gap-2">
                 <FluentEmojiFlatMemo />
                 <div>Blogs</div>
-              </div> */}
-              {/* <div>
-                <FluentEmojiFlatGraduationCap />
-              </div>
-              <div>
-                <FluentEmojiFlatBriefcase />
-              </div>
-              <div>
-                <FluentEmojiFlatMemo />
-              </div> */}
+              </Button> */}
             </div>
-
-            {/* <ul>
-            <li className="font-mono">menu</li>
-            <li className="font-mono">menu</li>
-            <li className="font-mono">menu</li>
-          </ul> */}
 
             <div className="w-[150px]">
               <div className="flex items-center justify-end">
