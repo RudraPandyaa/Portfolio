@@ -16,11 +16,11 @@ const NavigationBar = () => {
     <>
       <AlertNote />
       <UiWrapper>
-        <Card className="rounded-xl xl:my-2 lg:my-2 bg-orange-200 dark:bg-inherit">
+        <Card className=" xl:my-2 lg:my-2 bg-orange-200 dark:bg-inherit">
           <nav className="flex justify-between items-center px-10 py-5">
             <div className="font-mono w-[150px]">portfolio-v8</div>
 
-            <div className="xl:flex lg:flex md:flex hidden  gap-x-10 items-center text-sm">
+            <div className="xl:flex lg:flex md:flex ~hidden  gap-x-10 items-center text-sm">
               {navLinks.map((link, index) => (
                 <NavLinks
                   key={index}

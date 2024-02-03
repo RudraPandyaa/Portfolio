@@ -13,7 +13,7 @@ import { motion, useInView } from "framer-motion";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-const BentoGrid = () => {
+const Experience = () => {
   const [totalExpText, setTotalExpText] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const ref = useRef(null);
@@ -137,4 +137,4 @@ const BentoGrid = () => {
   );
 };
 
-export default BentoGrid;
+export default Experience;
