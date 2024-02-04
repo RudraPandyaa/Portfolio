@@ -93,16 +93,16 @@ const Experience = () => {
                     {/* <div>{experienceData[0].subRoles[0].description}</div> */}
                     <div>
                       Actively engaged in contributing to
-                      <span className="text-sky-950">
+                      <span className="text-black">
                         {" "}
                         large-scale live projects{" "}
                       </span>{" "}
                       , where I focus on implementing{" "}
-                      <span className="text-sky-950">Clean Code</span>{" "}
-                      principles to ensure the robustness and maintainability of
-                      the software dedicated to achieving client satisfaction by
+                      <span className="text-black">Clean Code</span> principles
+                      to ensure the robustness and maintainability of the
+                      software dedicated to achieving client satisfaction by
                       translating project requirements into{" "}
-                      <span className="text-sky-950">
+                      <span className="text-black">
                         efficient and effective{" "}
                       </span>{" "}
                       code solutions
