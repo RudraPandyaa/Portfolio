@@ -7,7 +7,6 @@ import { FluentEmojiFlatWavingHand } from "@/lib/icons/hey-icon";
 const NameCard = () => {
   const getGreeting = () => {
     const time = new Date().getHours();
-    // const time = 4;
 
     console.log("time", time);
 
@@ -26,12 +25,12 @@ const NameCard = () => {
     <UiWrapper>
       <div className="overflow-hidden">
         <Card className="flex flex-col justify-center items-center h-[620px]">
-          <h2 className="flex font-bold gap-2 items-center text-center xl:text-3xl md:text-2xl text-sm animate-reverse-fade-in [--ani-delay:0ms] opacity-0 translate-y-[-1rem] text-slate-500">
+          {/* <h2 className="flex font-bold gap-2 items-center text-center xl:text-3xl md:text-2xl text-sm animate-reverse-fade-in [--ani-delay:0ms] opacity-0 translate-y-[-1rem] text-slate-500">
             <div>
               <FluentEmojiFlatWavingHand />
             </div>
-            <div>Hey, Good {greeting}</div>
-          </h2>
+            <div>Hey, Good {greeting} I&apos;m</div>
+          </h2> */}
           <h1 className="flex font-bold text-center text-4xl  sm:text-4xl xl:text-6xl md:text-5xl lg:text-5xl  animate-fade-in [--ani-delay:200ms] opacity-0 translate-y-[-1rem]">
             <AnimatedName />
           </h1>
