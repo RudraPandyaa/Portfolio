@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import AnimatedName from "./_components/AnimatedName";
 import styles from "./NameCard.module.css";
 import { FluentEmojiFlatWavingHand } from "@/lib/icons/hey-icon";
+import SocialGrid from "../SocialGrid/SocialGrid";
 
 const NameCard = () => {
   const getGreeting = () => {
@@ -37,7 +38,7 @@ const NameCard = () => {
           <h2 className="flex font-bold text-center xl:text-3xl md:text-2xl text-sm animate-fade-in [--ani-delay:2000ms] opacity-0 translate-y-[-1rem] text-slate-500">
             a Frontend Developer
           </h2>
-          <div className="flex"></div>
+
           <div className={styles.topBlur} />
           <div className={styles.bottomBlur} />
         </div>

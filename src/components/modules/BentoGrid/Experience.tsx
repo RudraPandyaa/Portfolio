@@ -51,13 +51,13 @@ const Experience = () => {
           }
         }
         transition={{
-          duration: 0.6,
+          duration: 0.5,
         }}
         className="text-center text-2xl font-bold"
       >
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4 h-screen">
           <div className="col-span-3">
-            <Card className="w-full h-full">
+            <Card className="w-full">
               <CardHeader className="text-center">
                 <CardTitle>
                   {/* <ScrollAnimatedText text="Experience" /> */}

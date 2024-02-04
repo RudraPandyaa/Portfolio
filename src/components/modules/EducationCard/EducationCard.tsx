@@ -34,11 +34,11 @@ const EducationCard: React.FC = () => {
           }
         }
         transition={{
-          duration: 0.7,
+          duration: 0.5,
         }}
         className="text-center text-2xl"
       >
-        <div className="grid grid-cols-2 gap-4 px-28">
+        <div className="grid grid-cols-2 gap-4 px-28 h-screen">
           <div className="px-2 py-5 h-full">
             <div
               className="px-2 py-2

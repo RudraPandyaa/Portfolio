@@ -61,7 +61,7 @@ const ScrollAnimatedText = ({
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView]);
+  }, [isInView, controls, repeatDelay]);
 
   return (
     <div className={className}>

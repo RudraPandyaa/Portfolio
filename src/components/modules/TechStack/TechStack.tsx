@@ -4,7 +4,7 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 
 import { UiWrapper } from "@/components/shared";
-import { Card, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@iconify-icon/react";
 
 const TechStack = () => {
@@ -63,8 +63,10 @@ const TechStack = () => {
           </div>
         </Card> */}
         <div className="h-full grid xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-14 px-32">
-          <Card className="p-5">
-            <CardTitle className="text-rose-50">Languages</CardTitle>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-rose-50">Languages</CardTitle>
+            </CardHeader>
             <div
               className="p-5 flex justify-center gap-5
             "
@@ -77,8 +79,10 @@ const TechStack = () => {
               </div>
             </div>
           </Card>
-          <Card className="p-5">
-            <CardTitle className="text-green-100">Frameworks</CardTitle>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-green-100">Frameworks</CardTitle>
+            </CardHeader>
             <div
               className="p-5 flex justify-center gap-5
             "
@@ -89,8 +93,10 @@ const TechStack = () => {
               <Icon icon="devicon:svelte" style={frameWorkIconSize} />
             </div>
           </Card>
-          <Card className="p-5">
-            <CardTitle className="text-lime-50">Libraries</CardTitle>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lime-50">Libraries</CardTitle>
+            </CardHeader>
             <div
               className="p-5 flex justify-center gap-5
             "

@@ -10,14 +10,14 @@ export const navLinks = [
     text: "Home",
   },
   {
-    icon: <FluentEmojiFlatGraduationCap />,
-    href: "/education",
-    text: "Education",
-  },
-  {
     icon: <FluentEmojiFlatBriefcase />,
     href: "/work",
     text: "Work",
+  },
+  {
+    icon: <FluentEmojiFlatGraduationCap />,
+    href: "/education",
+    text: "Education",
   },
   {
     icon: <FluentEmojiFlatMemo />,
