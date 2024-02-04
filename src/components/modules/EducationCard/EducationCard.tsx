@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { collageData } from "@/constants/data";
+import { collageData } from "../../../../constants/data";
 import { Button } from "@/components/ui/button";
 import { Dot, ExternalLink } from "lucide-react";
 

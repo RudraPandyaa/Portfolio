@@ -9,8 +9,6 @@ const NameCard = () => {
   const getGreeting = () => {
     const time = new Date().getHours();
 
-    console.log("time", time);
-
     if (time < 12) {
       return "Morning";
     } else if (time < 18) {

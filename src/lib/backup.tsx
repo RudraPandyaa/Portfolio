@@ -141,3 +141,29 @@
         </div>
       </UiWrapper> */
 }
+
+//  <Card className="px-2 py-5 bg-[#482C3C]">
+//    <CardHeader>
+//      <CardTitle
+//        className="px-2 py-2
+//                     "
+//      >
+//        {/* <ScrollAnimatedText text="Devstree IT Services" /> */}
+//        Viji Foods
+//      </CardTitle>
+//      <CardDescription className="px-2 py-2">
+//        Team Lead Customer Service | Jan 2022 - Nov 2022 <br />
+//      </CardDescription>
+//    </CardHeader>
+//    <CardContent className="text-lg text-start">
+//      {/* <div>{experienceData[0].subRoles[0].description}</div> */}
+//      <div>
+//        <span className="text-yellow-200">Lead a team</span> of customer service
+//        representatives overseeing dynamic professionals dedicated to providing
+//        exceptional service to a renowned food chain, As the team lead for the
+//        drive-through service, my responsibilities extended to managing and
+//        coordinating order-taking processes to ensure a seamless and efficient
+//        customer experience.
+//      </div>
+//    </CardContent>
+//  </Card>;

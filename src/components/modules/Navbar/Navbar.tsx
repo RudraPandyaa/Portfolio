@@ -8,7 +8,7 @@ import { FluentEmojiFlatHouse } from "@/lib/icons/house";
 import { FluentEmojiFlatMemo } from "@/lib/icons/memo";
 import AlertNote from "./_components/AlertNote";
 import { Button } from "@/components/ui/button";
-import { navLinks } from "@/constants/nav-links";
+import { navLinks } from "../../../../constants/nav-links";
 import NavLinks from "./_components/NavLinks";
 
 const NavigationBar = () => {

@@ -21,8 +21,6 @@ export default function totalCorporateExperience() {
       "month"
     );
 
-    console.log(`${years} years ${remainingMonths} months`);
-
     return `${years} years ${remainingMonths} months`;
   }
 
@@ -30,8 +28,6 @@ export default function totalCorporateExperience() {
     totalExpInVijiFoods,
     totalExpInDevstree
   );
-
-  console.log("Total Experience:", totalExperience);
 
   return `Total of ${totalExperience} of experience in Corporate`;
 }
