@@ -1,7 +1,6 @@
 "use client";
 
 import { UiWrapper } from "@/components/shared";
-import ScrollAnimatedText from "@/components/shared/ScrollAnimatedText/ScrollAnimatedText";
 import {
   Card,
   CardDescription,
@@ -58,7 +57,6 @@ const Experience = () => {
       >
         <div className="grid grid-cols-3 gap-4">
           <div className="col-span-3">
-            {/* //TODO: Make this dynamic as per the months spent in devstree */}
             <Card className="w-full h-full">
               <CardHeader className="text-center">
                 <CardTitle>

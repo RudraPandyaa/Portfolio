@@ -24,7 +24,7 @@ const NameCard = () => {
   return (
     <UiWrapper>
       <div className="overflow-hidden">
-        <Card className="flex flex-col justify-center items-center h-[620px]">
+        <div className="flex flex-col justify-center items-center h-[620px]">
           {/* <h2 className="flex font-bold gap-2 items-center text-center xl:text-3xl md:text-2xl text-sm animate-reverse-fade-in [--ani-delay:0ms] opacity-0 translate-y-[-1rem] text-slate-500">
             <div>
               <FluentEmojiFlatWavingHand />
@@ -40,7 +40,7 @@ const NameCard = () => {
           <div className="flex"></div>
           <div className={styles.topBlur} />
           <div className={styles.bottomBlur} />
-        </Card>
+        </div>
       </div>
     </UiWrapper>
   );

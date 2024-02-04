@@ -14,7 +14,7 @@ import React from "react";
 export default function OverView() {
   return (
     <UiWrapper>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 my-14">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 my-14 px-32">
         <Card className="col-span-2">
           <CardHeader>
             <CardTitle>

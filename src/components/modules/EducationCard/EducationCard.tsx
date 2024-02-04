@@ -38,14 +38,14 @@ const EducationCard: React.FC = () => {
         }}
         className="text-center text-2xl"
       >
-        <div className="grid grid-cols-2 gap-4">
-          <div className="px-2 py-5">
-            <CardTitle
+        <div className="grid grid-cols-2 gap-4 px-28">
+          <div className="px-2 py-5 h-full">
+            <div
               className="px-2 py-2
                 "
             >
               Skill Based Education
-            </CardTitle>
+            </div>
 
             <Card className="px-2 py-5 mb-4">
               <CardHeader>
@@ -56,7 +56,7 @@ const EducationCard: React.FC = () => {
                 <CardDescription>By Angela Yu</CardDescription>
               </CardHeader>
               <CardContent>
-                <p>
+                <p className="text-lg">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusamus ipsam voluptatibus suscipit natus impedit dolore
                   repudiandae, odit molestiae animi aliquam eos dolorum cumque
@@ -74,13 +74,13 @@ const EducationCard: React.FC = () => {
             </Card>
           </div>
 
-          <div className="px-2 py-5 mb-4">
-            <CardTitle
+          <div className="px-2 py-5 mb-4 h-full">
+            <div
               className="px-2 py-2
                 "
             >
               Formal Education
-            </CardTitle>
+            </div>
             {/* <CardDescription className="px-2 py-2">
             
             </CardDescription>
@@ -107,7 +107,7 @@ const EducationCard: React.FC = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>
+                <p className="text-lg">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusamus ipsam voluptatibus suscipit natus impedit dolore
                   repudiandae, odit molestiae animi aliquam eos dolorum cumque
