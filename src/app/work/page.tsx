@@ -1,4 +1,6 @@
 import { Experience } from "@/components/modules";
+import Projects from "@/components/modules/Projects/projects";
+import { UiWrapper } from "@/components/shared";
 import UnderConstruction from "@/components/shared/under-construction";
 
 const Work = () => {
@@ -6,7 +8,12 @@ const Work = () => {
     return <UnderConstruction />;
   }
 
-  return <Experience />;
+  return (
+    <UiWrapper className="h-screen">
+      <Experience />
+      <Projects />
+    </UiWrapper>
+  );
 };
 
 export default Work;

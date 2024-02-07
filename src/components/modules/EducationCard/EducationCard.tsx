@@ -20,7 +20,7 @@ const EducationCard: React.FC = () => {
   const ref2 = useRef(null);
   const isInView = useInView(ref2, { amount: 0.5, once: false });
   return (
-    <UiWrapper>
+    <UiWrapper className="h-screen ">
       <motion.div
         ref={ref2}
         initial={{
@@ -36,16 +36,11 @@ const EducationCard: React.FC = () => {
         transition={{
           duration: 0.5,
         }}
-        className="text-center text-2xl"
+        className=" text-2xl"
       >
-        <div className="grid grid-cols-2 gap-4 px-28 h-screen">
-          <div className="px-2 py-5 h-full">
-            <div
-              className="px-2 py-2
-                "
-            >
-              Skill Based Education
-            </div>
+        <div className="grid grid-cols-2 gap-4 px-28 text-center">
+          <div className="px-2 py-5">
+            <div className="px-2 py-2">Skill Based Education</div>
 
             <Card className="px-2 py-5 mb-4">
               <CardHeader>
@@ -74,27 +69,8 @@ const EducationCard: React.FC = () => {
             </Card>
           </div>
 
-          <div className="px-2 py-5 mb-4 h-full">
-            <div
-              className="px-2 py-2
-                "
-            >
-              Formal Education
-            </div>
-            {/* <CardDescription className="px-2 py-2">
-            
-            </CardDescription>
-            <div className="flex flex-col justify-start items-start text-start pl-7">
-              <div className="flex justify-center items-center">
-                <div className="rounded-full w-2 h-2 bg-sky-300 mr-3"></div>
-
-                <div>{collageData.collage}</div>
-              </div>
-              <p className="text-sm text-zinc-400">{collageData.degree}</p>
-              <p className="text-sm text-zinc-500">
-                {collageData.startDate} - {collageData.endDate}
-              </p>
-            </div> */}
+          <div className="px-2 py-5">
+            <div className="px-2 py-2">Formal Education</div>
             <Card className="px-2 py-5">
               <CardHeader>
                 <CardTitle>
@@ -124,6 +100,39 @@ const EducationCard: React.FC = () => {
               </CardFooter>
             </Card>
           </div>
+        </div>
+
+        <div className="grid grid-cols-3 gap-5 px-32  ">
+          <Card>
+            <CardHeader>
+              <CardTitle>Next Js 14</CardTitle>
+              <CardDescription>Youtube</CardDescription>
+            </CardHeader>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>React Crash Course</CardTitle>
+              <CardDescription>Dave Gray | Youtube</CardDescription>
+            </CardHeader>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Tanstack Query</CardTitle>
+              <CardDescription>lorem ipsum</CardDescription>
+            </CardHeader>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Zustland</CardTitle>
+              <CardDescription>lorem ipsum</CardDescription>
+            </CardHeader>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Redux</CardTitle>
+              <CardDescription>lorem ipsum</CardDescription>
+            </CardHeader>
+          </Card>
         </div>
       </motion.div>
     </UiWrapper>

@@ -57,7 +57,7 @@ const Experience = () => {
         }}
         className="text-center text-2xl font-bold"
       >
-        <div className="grid grid-cols-3 gap-4 h-screen">
+        <div className="grid grid-cols-3 gap-4  px-28">
           <div className="col-span-3">
             <div className="w-full">
               <CardHeader className="text-center">

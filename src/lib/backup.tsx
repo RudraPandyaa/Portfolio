@@ -167,3 +167,20 @@
 //      </div>
 //    </CardContent>
 //  </Card>;
+
+{
+  /* <CardDescription className="px-2 py-2">
+            
+            </CardDescription>
+            <div className="flex flex-col justify-start items-start text-start pl-7">
+              <div className="flex justify-center items-center">
+                <div className="rounded-full w-2 h-2 bg-sky-300 mr-3"></div>
+
+                <div>{collageData.collage}</div>
+              </div>
+              <p className="text-sm text-zinc-400">{collageData.degree}</p>
+              <p className="text-sm text-zinc-500">
+                {collageData.startDate} - {collageData.endDate}
+              </p>
+            </div> */
+}
