@@ -11,7 +11,7 @@ const Work = () => {
   return (
     <UiWrapper className="h-screen">
       <Experience />
-      <Projects />
+      {/* <Projects /> */}
     </UiWrapper>
   );
 };
