@@ -20,7 +20,7 @@ export default function OverView() {
             <CardTitle>
               <span className="text-amber-200"> Building </span> | Experience
             </CardTitle>
-            <CardDescription>Card Description</CardDescription>
+            {/* <CardDescription>Card Description</CardDescription> */}
           </CardHeader>
           <CardContent>
             <p>
@@ -44,14 +44,13 @@ export default function OverView() {
             <CardTitle>
               <span className="text-amber-200"> Learnings </span> | Education
             </CardTitle>
-            <CardDescription>Card Description</CardDescription>
+            {/* <CardDescription>Card Description</CardDescription> */}
           </CardHeader>
           <CardContent>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              ipsam voluptatibus suscipit natus impedit dolore repudiandae, odit
-              molestiae animi aliquam eos dolorum cumque quasi itaque
-              praesentium reiciendis rerum velit esse.
+              Learning Trending and Production grade technologies and tools from
+              youtube, Pursuing B.Tech in Information Technology from Silver Oak
+              College of Engineering and Technology, Ahmedabad.
             </p>
           </CardContent>
           <CardFooter>
