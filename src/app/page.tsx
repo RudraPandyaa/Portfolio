@@ -1,4 +1,5 @@
 import { NameCard, OverView, TechStack } from "@/components/modules";
+import MyExperience from "@/components/modules/MyExperience/MyExperience";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
 
       <TechStack />
 
-      <OverView />
+      <MyExperience />
     </>
   );
 }
