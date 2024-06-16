@@ -30,15 +30,17 @@ export const MobileNavLinks = ({
   icon,
   href,
   text,
+  key,
 }: {
   icon: ReactNode;
   href: string;
   text: string;
+  key: number;
 }) => {
   const pathName = usePathname();
 
   return (
-    <Link href={href}>
+    <Link href={href} key={key}>
       <Button variant={pathName == href ? "active" : "ghost"} className="gap-2">
         <div className="flex flex-col justify-center items-center">
           <div>{icon}</div>

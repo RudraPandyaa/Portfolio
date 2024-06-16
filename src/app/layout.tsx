@@ -27,23 +27,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        enableSystem
-        disableTransitionOnChange
+      <body
+        className={cn(
+          "bg-page-gradient relative  antialiased dark:bg-page-gradient",
+          poppins.className
+        )}
       >
-        <body
-          className={cn(
-            "bg-page-gradient relative  antialiased dark:bg-page-gradient",
-            poppins.className
-          )}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
         >
           <NavigationBar />
           {children}
           <Footer />
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
