@@ -39,7 +39,7 @@ const NavigationBar = () => {
           </div>
         </nav>
       </div>
-      <div className="fixed bottom-0 flex justify-center items-center text-center  backdrop-blur  py-3 w-[300px] rounded-lg lg:hidden mx-10">
+      <div className="fixed bottom-0 flex justify-center items-center text-center  backdrop-blur  py-3 rounded-lg lg:hidden mx-10">
         {navLinks.map((link, index) => (
           <MobileNavLinks
             key={index}

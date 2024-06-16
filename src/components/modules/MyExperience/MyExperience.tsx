@@ -49,8 +49,8 @@ export default function MyExperience() {
         <SectionTitle>Experience & Education</SectionTitle>
         <div className="grid md:grid-cols-2 gap-4">
           <SimpleCard className="col-span-2">
-            <div className="flex bg-slate-50 rounded-3xl text-black">
-              <div className="text-end w-full ">
+            <div className="flex bg-slate-50 rounded-3xl text-black flex-col md:flex-row">
+              <div className="md:text-end w-full ">
                 <div className="bg-violet-200 text-violet-800 rounded-l-3xl  w-full p-6 ">
                   <Subtitle>{experienceData[0].subRoles[0].role}</Subtitle>
                   <p className="text-sm">
