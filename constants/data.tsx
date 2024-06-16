@@ -35,7 +35,7 @@ export const skillBasedEducationData = [
 
 export const experienceData = [
   {
-    company: "Devstree It Services",
+    company: "Devstree IT Services",
     role: "Jr Software Developer",
     startDate: "April 2022",
     endDate: "Present",

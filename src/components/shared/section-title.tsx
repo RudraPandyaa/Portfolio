@@ -10,7 +10,10 @@ export default function SectionTitle({
 }) {
   return (
     <div
-      className={cn("font-bold text-4xl mt-10 mb-20 text-center", className)}
+      className={cn(
+        "font-bold text-4xl my-10  text-center text-slate-400",
+        className
+      )}
     >
       {children}
     </div>
