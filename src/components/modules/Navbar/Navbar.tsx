@@ -49,7 +49,7 @@ const NavigationBar = () => {
 
           <div className="w-[150px]">
             <div className="flex items-center justify-end">
-              <ThemeToggle />
+              {/* <ThemeToggle /> */}
             </div>
           </div>
         </nav>
