@@ -20,7 +20,7 @@ const EducationCard: React.FC = () => {
   const ref2 = useRef(null);
   const isInView = useInView(ref2, { amount: 0.5, once: false });
   return (
-    <UiWrapper className="h-screen ">
+    <UiWrapper className="min-h-screen ">
       <motion.div
         ref={ref2}
         initial={{
@@ -38,7 +38,7 @@ const EducationCard: React.FC = () => {
         }}
         className=" text-2xl"
       >
-        <div className="grid grid-cols-2 gap-4 px-28 text-center">
+        <div className="grid md:grid-cols-2 gap-4 md:px-28 px-0 text-center">
           <div className="px-2 py-5">
             <div className="px-2 py-2">Skill Based Education</div>
 
@@ -102,7 +102,7 @@ const EducationCard: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-5 px-32  ">
+        <div className="grid md:grid-cols-3 gap-5 md:px-32 grid-col-1">
           <Card>
             <CardHeader>
               <CardTitle>Next Js 14</CardTitle>
