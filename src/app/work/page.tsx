@@ -1,5 +1,4 @@
 import { Experience } from "@/components/modules";
-import Projects from "@/components/modules/Projects/projects";
 import { UiWrapper } from "@/components/shared";
 import UnderConstruction from "@/components/shared/under-construction";
 
