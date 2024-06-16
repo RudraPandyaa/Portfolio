@@ -24,7 +24,6 @@ const EducationCard: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-4 md:px-28 text-center">
         <div className="px-2 py-5">
           <div className="px-2 py-2">Skill Based Education</div>
-
           <Card className="px-2 py-5 mb-4">
             <CardHeader>
               <CardTitle>

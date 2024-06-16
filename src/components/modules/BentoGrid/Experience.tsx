@@ -40,23 +40,7 @@ const Experience = () => {
 
   return (
     <UiWrapper>
-      <motion.div
-        ref={ref}
-        initial={{
-          opacity: 0,
-          y: 100,
-        }}
-        animate={
-          isInView && {
-            opacity: 1,
-            y: 0,
-          }
-        }
-        transition={{
-          duration: 0.5,
-        }}
-        className="text-center text-2xl font-bold"
-      >
+      <div className="text-center text-2xl font-bold">
         <div className="grid grid-cols-3 gap-4  md:px-28 px-0">
           <div className="col-span-3">
             <div className="w-full">
@@ -70,7 +54,7 @@ const Experience = () => {
                 className="grid xl:grid-cols-2
                lg:grid-cols-2  md:grid-cols-1
                sm:grid-cols-1
-              gap-4 px-6 pb-4"
+              gap-4 md:px-6 pb-4"
               >
                 <Card className="px-2 py-5 bg-[#9ecac9] text-[#0d4644]">
                   <CardHeader>
@@ -132,7 +116,7 @@ const Experience = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </UiWrapper>
   );
 };
