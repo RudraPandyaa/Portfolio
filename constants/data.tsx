@@ -1,6 +1,7 @@
 export const collageData = {
   collage: "Silver Oak University",
   degree: "Bachelor of Technology in Information Technology",
+  degreeShort: "B.Tech Information Technology",
   startDate: "June 2022",
   endDate: "June 2026",
 } as const;
