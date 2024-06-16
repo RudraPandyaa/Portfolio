@@ -9,17 +9,19 @@ import { FluentEmojiFlatMemo } from "@/lib/icons/memo";
 import AlertNote from "./_components/AlertNote";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "../../../../constants/nav-links";
-import NavLinks from "./_components/NavLinks";
+import { MobileNavLinks, NavLinks } from "./_components/NavLinks";
 
 const NavigationBar = () => {
   return (
     <>
       <AlertNote />
       <div className=" xl:my-2 lg:my-2 bg-orange-200 dark:bg-inherit">
-        <nav className="flex justify-between items-center px-10 py-5">
-          <div className="font-mono w-[150px]">portfolio-v8</div>
+        <nav className="flex flex-col md:flex-row justify-between items-center px-10 py-5">
+          <div className="font-mono w-[150px] hidden lg:block">
+            portfolio-v8
+          </div>
 
-          <div className="xl:flex lg:flex md:flex ~hidden  gap-x-10 items-center text-sm">
+          <div className="hidden lg:flex gap-x-10 items-center text-sm">
             {navLinks.map((link, index) => (
               <NavLinks
                 key={index}
@@ -28,23 +30,6 @@ const NavigationBar = () => {
                 text={link.text}
               />
             ))}
-
-            {/* <Button variant={"active"} className="gap-2">
-                <FluentEmojiFlatHouse />
-                <div>Home</div>
-              </Button>
-              <Button variant={"ghost"} className="gap-2">
-                <FluentEmojiFlatGraduationCap />
-                <div>Education</div>
-              </Button>
-              <Button variant={"ghost"} className="gap-2">
-                <FluentEmojiFlatBriefcase />
-                <div>Work</div>
-              </Button>
-              <Button variant={"ghost"} className="gap-2">
-                <FluentEmojiFlatMemo />
-                <div>Blogs</div>
-              </Button> */}
           </div>
 
           <div className="w-[150px]">
@@ -53,6 +38,16 @@ const NavigationBar = () => {
             </div>
           </div>
         </nav>
+      </div>
+      <div className="fixed bottom-0 flex justify-center items-center text-center bg-inherit  p-3 w-full rounded-lg lg:hidden">
+        {navLinks.map((link, index) => (
+          <MobileNavLinks
+            key={index}
+            icon={link.icon}
+            href={link.href}
+            text={link.text}
+          />
+        ))}
       </div>
     </>
   );
