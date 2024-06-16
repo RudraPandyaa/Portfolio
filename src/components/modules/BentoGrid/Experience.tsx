@@ -61,10 +61,7 @@ const Experience = () => {
           <div className="col-span-3">
             <div className="w-full">
               <CardHeader className="text-center">
-                <CardTitle>
-                  {/* <ScrollAnimatedText text="Experience" /> */}
-                  Experience
-                </CardTitle>
+                <CardTitle>Experience</CardTitle>
                 <CardDescription>
                   {isLoading ? "Loading..." : totalExpText}
                 </CardDescription>
@@ -81,7 +78,6 @@ const Experience = () => {
                       className="px-2 py-2 
                     "
                     >
-                      {/* <ScrollAnimatedText text="Devstree IT Services" /> */}
                       Devstree IT Services
                     </CardTitle>
                     <CardDescription className="px-2 py-2 text-teal-800">
@@ -90,7 +86,6 @@ const Experience = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="text-lg text-start">
-                    {/* <div>{experienceData[0].subRoles[0].description}</div> */}
                     <div>
                       Actively engaged in contributing to
                       <span className="text-black">
@@ -115,7 +110,6 @@ const Experience = () => {
                       className="px-2 py-2 
                     "
                     >
-                      {/* <ScrollAnimatedText text="Devstree IT Services" /> */}
                       Viji Foods
                     </CardTitle>
                     <CardDescription className="px-2 py-2 text-violet-950">
@@ -123,7 +117,6 @@ const Experience = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="text-lg text-start ">
-                    {/* <div>{experienceData[0].subRoles[0].description}</div> */}
                     <div>
                       <span className="text-indigo-950">Lead a team</span> of
                       customer service representatives overseeing dynamic
@@ -138,34 +131,6 @@ const Experience = () => {
               </div>
             </div>
           </div>
-          {/* <div>
-          <Card
-            className="w-full h-full 
-           flex justify-center items-center
-          "
-          >
-            <div className="p-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-              aspernatur?
-            </div>
-          </Card>
-        </div>
-        <div>
-          <Card className="w-full h-full">
-            <div className="p-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-              aspernatur?
-            </div>
-          </Card>
-        </div>
-        <div>
-          <Card className="w-full h-full">
-            <div className="p-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-              aspernatur?
-            </div>
-          </Card>
-        </div> */}
         </div>
       </motion.div>
     </UiWrapper>
