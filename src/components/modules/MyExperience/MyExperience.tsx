@@ -37,6 +37,12 @@ export default function MyExperience() {
     "Computer Networks",
   ];
 
+  const events = [
+    "Hack for India Hackathon",
+    "IIM Red Brick Summit MUN 2022",
+    "Google Developer Student Club Events",
+  ];
+
   return (
     <>
       <V3Wrapper>
@@ -98,8 +104,8 @@ export default function MyExperience() {
                     ))}
                   </h3>
                   <h3>
-                    ₪ Integrated Features like{" "}
-                    {features.map((tool, index) => (
+                    ₪ Participated in{" "}
+                    {events.map((tool, index) => (
                       <Badge
                         key={index}
                         className="bg-[#b9d2d2] text-[#0d4644] text-sm m-2"
