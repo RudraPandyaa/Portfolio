@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { experienceData } from "../../../constants/data";
+import { experienceData } from "../../../../constants/data";
 
 const Work = () => {
   if (process.env.NEXT_PUBLIC_DEPLOY === "true") {

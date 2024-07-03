@@ -12,21 +12,18 @@ export function ThemeToggle() {
 
   useEffect(() => {
     // ENABLE THIS IF YOU WANT TO USE SYSTEM THEME AS DEFAULT
-
-    const checkTheSystemThemeIsDark =
-      document.documentElement.classList.contains("dark");
-
-    if (checkTheSystemThemeIsDark) {
-      setChecked(true);
-      setIsThemeDark(true);
-    } else {
-      setIsThemeDark(false);
-      setChecked(false);
-    }
-
+    // const checkTheSystemThemeIsDark =
+    //   document.documentElement.classList.contains("dark");
+    // if (checkTheSystemThemeIsDark) {
+    //   setChecked(true);
+    //   setIsThemeDark(true);
+    // } else {
+    //   setIsThemeDark(false);
+    //   setChecked(false);
+    // }
     // //THEME SHOULD BE DARK BY DEFAULT
-    // setTheme("dark");
-    // setChecked(true);
+    setTheme("dark");
+    setChecked(true);
   }, []);
 
   return (

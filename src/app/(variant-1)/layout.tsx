@@ -1,8 +1,10 @@
-import { ThemeProvider } from "@/components/providers";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import { ThemeProvider } from "@/components/providers";
+import { cn } from "@/lib/utils";
+import NavigationBar from "@/components/modules/Navbar/Navbar";
+import Footer from "@/components/modules/Footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,7 +17,6 @@ export const metadata: Metadata = {
     template: "%s | Faizanahmed-v8",
   },
   description: "V8 Of My Portfolio",
-  keywords: ["nextjs", "typescript", "tailwindcss"],
 };
 
 export default function RootLayout({
@@ -37,7 +38,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <NavigationBar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

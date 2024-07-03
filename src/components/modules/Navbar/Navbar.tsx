@@ -1,17 +1,18 @@
-import React from "react";
-import { ThemeToggle } from "../../dark-mode-toggle";
-import { Card } from "@/components/ui/card";
-import { UiWrapper } from "@/components/shared";
-import { FluentEmojiFlatBriefcase } from "@/lib/icons/breaf-case";
-import { FluentEmojiFlatGraduationCap } from "@/lib/icons/education";
-import { FluentEmojiFlatHouse } from "@/lib/icons/house";
-import { FluentEmojiFlatMemo } from "@/lib/icons/memo";
-import AlertNote from "./_components/AlertNote";
-import { Button } from "@/components/ui/button";
+"use client";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { navLinks } from "../../../../constants/nav-links";
+import AlertNote from "./_components/AlertNote";
 import { MobileNavLinks, NavLinks } from "./_components/NavLinks";
+import { useRouter } from "next/navigation";
 
 const NavigationBar = () => {
+  const router = useRouter();
   return (
     <>
       <AlertNote />
@@ -35,6 +36,24 @@ const NavigationBar = () => {
           <div className="w-[150px]">
             <div className="flex items-center justify-end">
               {/* <ThemeToggle /> */}
+              <Select
+                onValueChange={(value) => {
+                  if (value === "v-1") {
+                    router.push("/");
+                  } else if (value === "v-2") {
+                    router.push("/v-2");
+                  } else {
+                  }
+                }}
+              >
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Variant" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="v-1">Variant 1</SelectItem>
+                  <SelectItem value="v-2">Variant 2</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           </div>
         </nav>

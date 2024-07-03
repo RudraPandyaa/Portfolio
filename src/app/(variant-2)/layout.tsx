@@ -2,7 +2,7 @@ import { ThemeProvider } from "@/components/providers";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -37,7 +37,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="px-[24%] flex justify-center items-center flex-col gap-4">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
