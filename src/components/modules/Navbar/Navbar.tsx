@@ -1,18 +1,9 @@
-"use client";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import VariantSwitch from "@/components/shared/variant-switch";
 import { navLinks } from "../../../../constants/nav-links";
 import AlertNote from "./_components/AlertNote";
 import { MobileNavLinks, NavLinks } from "./_components/NavLinks";
-import { useRouter } from "next/navigation";
 
 const NavigationBar = () => {
-  const router = useRouter();
   return (
     <>
       <AlertNote />
@@ -36,24 +27,7 @@ const NavigationBar = () => {
           <div className="w-[150px]">
             <div className="flex items-center justify-end">
               {/* <ThemeToggle /> */}
-              <Select
-                onValueChange={(value) => {
-                  if (value === "v-1") {
-                    router.push("/");
-                  } else if (value === "v-2") {
-                    router.push("/v-2");
-                  } else {
-                  }
-                }}
-              >
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Variant" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="v-1">Variant 1</SelectItem>
-                  <SelectItem value="v-2">Variant 2</SelectItem>
-                </SelectContent>
-              </Select>
+              <VariantSwitch />
             </div>
           </div>
         </nav>

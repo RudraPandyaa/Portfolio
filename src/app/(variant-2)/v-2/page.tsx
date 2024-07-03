@@ -1,5 +1,6 @@
 import LinearGradient from "@/components/magicui/linear-gradient";
 import RadialGradient from "@/components/magicui/radial-gradient";
+import VariantSwitch from "@/components/shared/variant-switch";
 import { FlipWords } from "@/components/ui/flip-words";
 
 type Props = {};
@@ -17,7 +18,7 @@ export default function Page({}: Props) {
       {/* <RadialGradient /> */}
       <div>
         <header className="flex gap-4 justify-between my-10">
-          <div>Variant-2</div>
+          <VariantSwitch />
 
           <div className="flex gap-4">
             <div>Home</div>
@@ -32,16 +33,34 @@ export default function Page({}: Props) {
           <FlipWords words={words} /> <br />
         </h1> */}
         <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl tracking-normal">
-          A Driven Software Engineer with a passion for building{" "}
-          <strong className="text-yellow-200">scalable</strong>,{" "}
-          <strong className="text-yellow-200">user friendly</strong> and{" "}
-          <strong className="text-yellow-200">beautiful</strong> web
+          I&apos;m Driven Software Engineer with a passion for building{" "}
+          <strong className="text-violet-300">scalable</strong>,{" "}
+          <strong className="text-violet-300">user friendly</strong> and{" "}
+          <strong className="text-violet-300">beautiful</strong> web
           applications.
         </p>
+        {/* <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl tracking-normal">
+          I&apos;m proficient in modern frontend web technologies like Next JS,
+          Svelte kit, React, Three JS, Tailwind and more
+        </p> */}
+
         <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl tracking-normal">
-          I am proficient in modern web technologies like Next JS, Svelte kit,
-          React, Three JS, Tailwind and more
+          Currenly a{" "}
+          <strong className="text-yellow-200">
+            Design Engineer @Devstree{" "}
+          </strong>{" "}
+          promanatly working With Next Js, Three JS and Tailwind, I have
+          completed 10+ live projects in the past 1 year.
         </p>
+
+        <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl tracking-normal">
+          Currenly working on{" "}
+          <span className="text-blue-300 font-medium">Smart Donkey</span> - An
+          Online platform to learn skills that schools didn&apos;t taught and{" "}
+          <span className="text-blue-300 font-medium">Kitty Kit</span> - A
+          Frontend Toolkit for all the frontend developers needs
+        </p>
+
         {/* <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
           The King&apos;s Plan
         </h2>
