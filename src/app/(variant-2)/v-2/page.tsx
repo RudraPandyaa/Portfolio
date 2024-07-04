@@ -26,13 +26,13 @@ export default function Page({}: Props) {
             <div>Resume</div>
           </div>
         </header>
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+        <h1 className="scroll-m-20 text-3xl md:text-4xl font-extrabold tracking-tight lg:text-5xl">
           Hi there, I&apos;m Faizan
         </h1>
         {/* <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           <FlipWords words={words} /> <br />
         </h1> */}
-        <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl tracking-normal">
+        <p className="md:leading-7 [&:not(:first-child)]:mt-6 md:text-2xl tracking-normal">
           I&apos;m Driven Software Engineer with a passion for building{" "}
           <strong className="text-violet-300">scalable</strong>,{" "}
           <strong className="text-violet-300">user friendly</strong> and{" "}
@@ -44,7 +44,7 @@ export default function Page({}: Props) {
           Svelte kit, React, Three JS, Tailwind and more
         </p> */}
 
-        <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl tracking-normal">
+        <p className="md:leading-7 [&:not(:first-child)]:mt-6 md:text-2xl tracking-normal">
           Currenly a{" "}
           <strong className="text-yellow-200">
             Design Engineer @Devstree{" "}
@@ -53,7 +53,7 @@ export default function Page({}: Props) {
           completed 10+ live projects in the past 1 year.
         </p>
 
-        <p className="leading-7 [&:not(:first-child)]:mt-6 text-2xl tracking-normal">
+        <p className="md:leading-7 [&:not(:first-child)]:mt-6 md:text-2xl tracking-normal">
           Currenly working on{" "}
           <span className="text-blue-300 font-medium">Smart Donkey</span> - An
           Online platform to learn skills that schools didn&apos;t taught and{" "}
