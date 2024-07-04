@@ -61,11 +61,11 @@ export default function Page({}: Props) {
           Frontend Toolkit for all the frontend developers needs
         </p>
 
-        <div className="my-10 flex gap-4 justify-between px-4">
-          <div className="border p-4 px-10 rounded-md">Linkedin</div>
-          <div className="border p-4 px-10 rounded-md">Github</div>
-          <div className="border p-4 px-10 rounded-md">Mail</div>
-          <div className="border p-4 px-10 rounded-md">Twitter</div>
+        <div className="md:my-10 flex gap-4 justify-between m:px-4 my-5">
+          <div className="border p-4 md:px-10 rounded-md">Linkedin</div>
+          <div className="border p-4 md:px-10 rounded-md">Github</div>
+          <div className="border p-4 md:px-10 rounded-md">Mail</div>
+          <div className="border p-4 md:px-10 rounded-md">Twitter</div>
         </div>
 
         <h2 className="mt-10 scroll-m-20   pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
