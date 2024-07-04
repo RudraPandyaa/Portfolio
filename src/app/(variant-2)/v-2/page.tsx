@@ -61,10 +61,25 @@ export default function Page({}: Props) {
           Frontend Toolkit for all the frontend developers needs
         </p>
 
-        {/* <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-          The King&apos;s Plan
+        <div className="my-10 flex gap-4 justify-between px-4">
+          <div className="border p-4 px-10 rounded-md">Linkedin</div>
+          <div className="border p-4 px-10 rounded-md">Github</div>
+          <div className="border p-4 px-10 rounded-md">Mail</div>
+          <div className="border p-4 px-10 rounded-md">Twitter</div>
+        </div>
+
+        <h2 className="mt-10 scroll-m-20   pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+          My Work
         </h2>
-        <p className="leading-7 [&:not(:first-child)]:mt-6">
+
+        <div className="grid md:grid-cols-2 py-4 gap-4">
+          {Array.from({ length: 7 }).map((_, i) => (
+            <div key={i} className="border p-5 rounded-md">
+              Project {i + 1}
+            </div>
+          ))}
+        </div>
+        {/*<p className="leading-7 [&:not(:first-child)]:mt-6">
           The king thought long and hard, and finally came up with{" "}
           <a
             href="#"
