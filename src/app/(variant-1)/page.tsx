@@ -1,5 +1,4 @@
-import { NameCard, TechStack } from "@/components/modules";
-import MyExperience from "@/components/modules/MyExperience/MyExperience";
+import { MyExperience, NameCard, TechStack } from "@/components";
 
 export default function Home() {
   return (

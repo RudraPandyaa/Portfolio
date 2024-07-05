@@ -1,7 +1,5 @@
-import LinearGradient from "@/components/magicui/linear-gradient";
-import RadialGradient from "@/components/magicui/radial-gradient";
-import VariantSwitch from "@/components/shared/variant-switch";
-import { FlipWords } from "@/components/ui/flip-words";
+import { VariantSwitch } from "@/components";
+import { Project } from "@/types";
 
 type Props = {};
 
@@ -11,6 +9,21 @@ export default function Page({}: Props) {
   //   "A-BTech-Student",
   //   "A-Lover-of-making-things-beautiful",
   // ];
+
+  const ProjectsData: Project[] = [
+    {
+      title: "Kitty Kit",
+      des: "A Frontend Toolkit for all the frontend developers needs",
+      tech: ["Next JS", "Shadcn", "Tailwind"],
+      status: "In Progress",
+    },
+    {
+      title: "Smart Donkey",
+      des: "A Frontend Toolkit for all the frontend developers needs",
+      tech: ["Next JS", "Shadcn", "Tailwind"],
+      status: "On Hold",
+    },
+  ];
 
   return (
     <>
