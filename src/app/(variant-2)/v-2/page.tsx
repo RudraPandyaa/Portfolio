@@ -1,5 +1,7 @@
 import { VariantSwitch } from "@/components";
+import { cn } from "@/lib/utils";
 import { Project } from "@/types";
+import { it } from "node:test";
 
 type Props = {};
 
@@ -22,6 +24,30 @@ export default function Page({}: Props) {
       des: "A Frontend Toolkit for all the frontend developers needs",
       tech: ["Next JS", "Shadcn", "Tailwind"],
       status: "On Hold",
+    },
+    {
+      title: "Apex Auto",
+      des: "An All in One saas for Garange owners",
+      tech: ["MUI", "React JS"],
+      status: "Completed",
+    },
+    {
+      title: "Apex Web Booking",
+      des: "A web app for booking car service appontments",
+      tech: ["Next JS", "MUI", "Tailwind"],
+      status: "Completed",
+    },
+    {
+      title: "Apex Admin Panel",
+      des: "An Admin Panel for Apex Auto",
+      tech: ["Crema Admin Panel Theme", "Ant design", "React JS"],
+      status: "Completed",
+    },
+    {
+      title: "AI 3D Talking Avatar Chat  Bot",
+      des: "A 3D Avatar Chat Bot that can speak the chat output with lip sink",
+      tech: ["Three JS", "Next JS", "Azure Speech API", "Tailwind", "Shadcn"],
+      status: "Completed",
     },
   ];
 
@@ -60,7 +86,7 @@ export default function Page({}: Props) {
         <p className="md:leading-7 [&:not(:first-child)]:mt-6 md:text-2xl tracking-normal">
           Currenly a{" "}
           <strong className="text-yellow-200">
-            Design Engineer @Devstree{" "}
+            Frontend Engineer @Devstree{" "}
           </strong>{" "}
           promanatly working With Next Js, Three JS and Tailwind, I have
           completed 10+ live projects in the past 1 year.
@@ -86,9 +112,35 @@ export default function Page({}: Props) {
         </h2>
 
         <div className="grid md:grid-cols-2 py-4 gap-4">
-          {Array.from({ length: 7 }).map((_, i) => (
+          {ProjectsData.map((product, i) => (
             <div key={i} className="border p-5 rounded-md">
-              Project {i + 1}
+              <div className="flex justify-between">
+                <h2 className="font-bold ">{product.title}</h2>
+                <p
+                  className={cn(
+                    "text-xs text-zinc-400 border px-2 py-1 rounded-2xl",
+                    product.status === "Completed" &&
+                      "text-green-100 border-green-700",
+                    product.status === "In Progress" &&
+                      "text-yellow-100 border-yellow-700",
+                    product.status === "On Hold" &&
+                      "text-red-100 border-red-700"
+                  )}
+                >
+                  {product.status}
+                </p>
+              </div>
+              <p className="mb-4 mt-2 text-zinc-400">{product.des}</p>
+              <div className="flex gap-4 flex-wrap">
+                {product.tech.map((tech, i) => (
+                  <div
+                    key={product.title}
+                    className="bg-zinc-500 px-3 py-1 rounded-2xl"
+                  >
+                    <p className="text-xs">{tech}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
