@@ -55,7 +55,7 @@ export default function Page({}: Props) {
   return (
     <>
       <main
-        className="md:px-[24%] px-10 flex-wrap flex justify-center  flex-col  overflow-hidden"
+        className="md:px-[24%] px-6 flex-wrap flex justify-center  flex-col  overflow-hidden"
         suppressHydrationWarning
       >
         <header className="flex md:gap-4 justify-between my-10">
