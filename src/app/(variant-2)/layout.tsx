@@ -37,9 +37,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="md:px-[24%] px-20  flex justify-center items-center flex-col gap-4 overflow-hidden">
-            {children}
-          </main>
+          {children}
         </ThemeProvider>
       </body>
     </html>

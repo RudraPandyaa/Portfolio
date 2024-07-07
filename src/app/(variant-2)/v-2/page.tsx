@@ -1,6 +1,7 @@
 import { VariantSwitch } from "@/components";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types";
+import { Menu } from "lucide-react";
 import { it } from "node:test";
 
 type Props = {};
@@ -53,16 +54,19 @@ export default function Page({}: Props) {
 
   return (
     <>
-      {/* <LinearGradient /> */}
-      {/* <RadialGradient /> */}
-      <div>
-        <header className="flex gap-4 justify-between my-10">
+      <main
+        className="md:px-[24%] px-10 flex-wrap flex justify-center md:items-center flex-col  overflow-hidden"
+        suppressHydrationWarning
+      >
+        <header className="flex md:gap-4 justify-between my-10">
           <VariantSwitch />
-
-          <div className="flex gap-4">
+          <nav className="hidden md:flex md:gap-4">
             <div>Home</div>
             <div>About</div>
             <div>Resume</div>
+          </nav>
+          <div className="flex md:hidden justify-center items-center">
+            <Menu />
           </div>
         </header>
         <h1 className="scroll-m-20 text-3xl md:text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -100,7 +104,7 @@ export default function Page({}: Props) {
           Frontend Toolkit for all the frontend developers needs
         </p>
 
-        <div className="md:my-10 flex gap-4 justify-between m:px-4 my-5">
+        <div className="grid grid-col-2 md:grid-col-4 gap-6 mt-6 grid-cols-2">
           <div className="border p-4 md:px-10 rounded-md">Linkedin</div>
           <div className="border p-4 md:px-10 rounded-md">Github</div>
           <div className="border p-4 md:px-10 rounded-md">Mail</div>
@@ -118,7 +122,7 @@ export default function Page({}: Props) {
                 <h2 className="font-bold ">{product.title}</h2>
                 <p
                   className={cn(
-                    "text-xs text-zinc-400 border px-2 py-1 rounded-2xl",
+                    "text-xs text-zinc-400 border px-2 py-1 rounded-2xl max-h-6",
                     product.status === "Completed" &&
                       "text-green-100 border-green-700",
                     product.status === "In Progress" &&
@@ -246,7 +250,7 @@ export default function Page({}: Props) {
           The moral of the story is: never underestimate the power of a good
           laugh and always be careful of bad ideas.
         </p>*/}
-      </div>
+      </main>
     </>
   );
 }
