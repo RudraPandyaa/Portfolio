@@ -10,14 +10,6 @@ const poppins = Poppins({
   weight: ["400", "500", "600"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Faizanahmed | v8",
-    template: "%s | Faizanahmed-v8",
-  },
-  description: "V8 Of My Portfolio",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
