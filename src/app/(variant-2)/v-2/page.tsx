@@ -76,7 +76,7 @@ export default function Page({}: Props) {
           <FlipWords words={words} /> <br />
         </h1> */}
         <p className="md:leading-7 [&:not(:first-child)]:mt-6 md:text-2xl tracking-normal">
-          I&apos;m Driven Software Engineer with a passion for building{" "}
+          I&apos;m a driven Software Engineer with a passion for building{" "}
           <strong className="text-violet-300">scalable</strong>,{" "}
           <strong className="text-violet-300">user friendly</strong> and{" "}
           <strong className="text-violet-300">beautiful</strong> web
