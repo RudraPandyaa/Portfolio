@@ -55,7 +55,7 @@ export default function Page({}: Props) {
   return (
     <>
       <main
-        className="md:px-[24%] px-10 flex-wrap flex justify-center md:items-center flex-col  overflow-hidden"
+        className="md:px-[24%] px-10 flex-wrap flex justify-center  flex-col  overflow-hidden"
         suppressHydrationWarning
       >
         <header className="flex md:gap-4 justify-between my-10">
@@ -104,11 +104,17 @@ export default function Page({}: Props) {
           Frontend Toolkit for all the frontend developers needs
         </p>
 
-        <div className="grid grid-col-2 md:grid-col-4 gap-6 mt-6 grid-cols-2">
-          <div className="border p-4 md:px-10 rounded-md">Linkedin</div>
-          <div className="border p-4 md:px-10 rounded-md">Github</div>
-          <div className="border p-4 md:px-10 rounded-md">Mail</div>
-          <div className="border p-4 md:px-10 rounded-md">Twitter</div>
+        <div className="grid  md:grid-cols-4 gap-6 mt-6 grid-cols-2">
+          <div className="border p-2 md:px-10 text-center rounded-md">
+            Linkedin
+          </div>
+          <div className="border p-2 md:px-10 text-center rounded-md">
+            Github
+          </div>
+          <div className="border p-2 md:px-10 text-center rounded-md">Mail</div>
+          <div className="border p-2 md:px-10 text-center rounded-md">
+            Twitter
+          </div>
         </div>
 
         <h2 className="mt-10 scroll-m-20   pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
