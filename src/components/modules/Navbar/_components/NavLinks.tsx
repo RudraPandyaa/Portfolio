@@ -42,7 +42,7 @@ export const MobileNavLinks = ({
   return (
     <Link href={href} key={key}>
       <Button variant={pathName == href ? "active" : "ghost"} className="gap-2">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center z-10">
           <div>{icon}</div>
           <div>{text}</div>
         </div>

@@ -28,7 +28,7 @@ export default function VariantSwitch({}: Props) {
       }}
       defaultValue={pathname === "/v-2" ? "v-2" : "v-1"}
     >
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-[180px] relative z-10">
         <SelectValue placeholder="Variant" />
       </SelectTrigger>
       <SelectContent>
