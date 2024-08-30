@@ -11,8 +11,11 @@ import { Experience } from "@/components/modules";
 import { UiWrapper } from "@/components/shared";
 import UnderConstruction from "@/components/shared/under-construction";
 import { EducationCard } from "@/components/modules";
-
+import MyProjects from "@/components/modules/Projects/MyProjects";
+import V3Wrapper from "@/components/shared/v3Wrapper";
+import SectionTitle from "@/components/shared/section-title";
 export {
+  SectionTitle,
   NavigationBar,
   Footer,
   NameCard,
@@ -22,4 +25,6 @@ export {
   UiWrapper,
   UnderConstruction,
   EducationCard,
+  MyProjects,
+  V3Wrapper,
 };

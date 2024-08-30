@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { collageData } from "../../../../constants/data";
+import { collageData } from "@/constants/data";
 import { Button } from "@/components/ui/button";
 import { Dot, ExternalLink } from "lucide-react";
 
@@ -24,7 +24,7 @@ const EducationCard: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-4 md:px-28 text-center">
         <div className="px-2 py-5">
           <div className="px-2 py-2">Skill Based Education</div>
-          <Card className="px-2 py-5 mb-4">
+          <Card className="flex flex-col px-2 py-5 h-[300px]">
             <CardHeader>
               <CardTitle>
                 <span className="text-amber-200"> Full Stack Web Dev </span> |
@@ -32,15 +32,13 @@ const EducationCard: React.FC = () => {
               </CardTitle>
               <CardDescription>By Angela Yu</CardDescription>
             </CardHeader>
-            <CardContent>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus ipsam voluptatibus suscipit natus impedit dolore
-                repudiandae, odit molestiae animi aliquam eos dolorum cumque
-                quasi itaque praesentium reiciendis rerum velit esse.
+            <CardContent className="flex-grow">
+              <p className="text-sm">
+                Learn to build websites with HTML, CSS, Bootstrap, Javascript,
+                Node.js, MongoDB, Express and more!
               </p>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex justify-end">
               <div className="flex justify-between w-full items-center text-sm">
                 <div className="text-muted-foreground">View Course</div>
                 <Button variant={"ghost"}>
@@ -53,7 +51,7 @@ const EducationCard: React.FC = () => {
 
         <div className="px-2 py-5">
           <div className="px-2 py-2">Formal Education</div>
-          <Card className="px-2 py-5">
+          <Card className="flex flex-col px-2 py-5 h-[300px]">
             <CardHeader>
               <CardTitle>
                 <span className="text-teal-200"> Btech IT</span> |{" "}
@@ -64,15 +62,12 @@ const EducationCard: React.FC = () => {
                 {collageData.startDate} - {collageData.endDate}
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus ipsam voluptatibus suscipit natus impedit dolore
-                repudiandae, odit molestiae animi aliquam eos dolorum cumque
-                quasi itaque praesentium reiciendis rerum velit esse.
+            <CardContent className="flex-grow">
+              <p className="text-sm">
+                Learned about the basics of computer science and programming
               </p>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex justify-end">
               <div className="flex justify-between w-full items-center text-sm">
                 <div className="text-muted-foreground">View Course</div>
                 <Button variant={"ghost"}>
@@ -85,31 +80,31 @@ const EducationCard: React.FC = () => {
       </div>
 
       <div className="grid md:grid-cols-3 gap-5 md:px-32 grid-col-1">
-        <Card>
+        <Card className="flex flex-col">
           <CardHeader>
             <CardTitle>Next Js 14</CardTitle>
             <CardDescription>Youtube</CardDescription>
           </CardHeader>
         </Card>
-        <Card>
+        <Card className="flex flex-col">
           <CardHeader>
             <CardTitle>React Crash Course</CardTitle>
             <CardDescription>Dave Gray | Youtube</CardDescription>
           </CardHeader>
         </Card>
-        <Card>
+        <Card className="flex flex-col">
           <CardHeader>
             <CardTitle>Tanstack Query</CardTitle>
             <CardDescription>lorem ipsum</CardDescription>
           </CardHeader>
         </Card>
-        <Card>
+        <Card className="flex flex-col">
           <CardHeader>
             <CardTitle>Zustland</CardTitle>
             <CardDescription>lorem ipsum</CardDescription>
           </CardHeader>
         </Card>
-        <Card>
+        <Card className="flex flex-col">
           <CardHeader>
             <CardTitle>Redux</CardTitle>
             <CardDescription>lorem ipsum</CardDescription>

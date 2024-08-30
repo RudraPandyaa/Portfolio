@@ -1,3 +1,5 @@
+import { Project } from "@/types";
+
 export const collageData = {
   collage: "Silver Oak University",
   degree: "Bachelor of Technology in Information Technology",
@@ -74,5 +76,54 @@ export const experienceData = [
     startDate: "Jan 2022",
     endDate: "Nav 2022",
     duration: "11 Months",
+  },
+] as const;
+
+export const line =
+  "01001001 00100000 01100011 01100001 01101110 00100000 01100011 01100101 01101110 01110100 01100101 01110010 00100000 01100001 00100000 01100100 01101001 01110110";
+
+export const ProjectsData: Project[] = [
+  {
+    title: "Kitty Kit",
+    des: "A Frontend Toolkit for all the frontend developers needs",
+    tech: ["Next JS", "Shadcn", "Tailwind"],
+    status: "In Progress",
+    href: "https://kitty-kit.vercel.app/",
+  },
+  {
+    title: "Smart Donkey",
+    des: "An Educational Platform for learning new life skills like finance, self defence , etc",
+    tech: ["Next JS", "Shadcn", "Tailwind"],
+    status: "On Hold",
+  },
+  {
+    title: "Car Import Export Portal",
+    des: "Landing Page, SAAS and Admin Panel for Car Import Export Business",
+    tech: ["Next JS", "Ant Design", "Redux"],
+    status: "In Progress",
+  },
+  {
+    title: "SAAS For Garange Owners",
+    des: "An All in One saas for Garange owners",
+    tech: ["MUI", "React JS"],
+    status: "Completed",
+  },
+  {
+    title: "Appointment Booking Portal",
+    des: "A web app for booking car service appontments",
+    tech: ["Next JS", "MUI", "Tailwind"],
+    status: "Completed",
+  },
+  {
+    title: "Admin Panel",
+    des: "An Admin Panel for managing the car service apps",
+    tech: ["Crema Admin Panel Theme", "Ant design", "React JS"],
+    status: "Completed",
+  },
+  {
+    title: "AI 3D Talking Avatar Chat  Bot",
+    des: "A 3D Avatar Chat Bot that can speak the chat output with lip sink",
+    tech: ["Three JS", "Next JS", "Azure Speech API", "Tailwind", "Shadcn"],
+    status: "Completed",
   },
 ] as const;

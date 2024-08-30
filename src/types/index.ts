@@ -3,4 +3,5 @@ export type Project = {
   des: string;
   tech: string[];
   status: "In Progress" | "Completed" | "On Hold";
+  href?: string;
 };

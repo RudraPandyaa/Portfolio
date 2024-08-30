@@ -4,6 +4,7 @@ import AnimatedName from "./_components/AnimatedName";
 import styles from "./NameCard.module.css";
 import { FluentEmojiFlatWavingHand } from "@/lib/icons/hey-icon";
 import SocialGrid from "../SocialGrid/SocialGrid";
+import dynamic from "next/dynamic";
 
 const NameCard = () => {
   const getGreeting = () => {
@@ -45,4 +46,9 @@ const NameCard = () => {
   );
 };
 
-export default NameCard;
+export default dynamic(() => Promise.resolve(NameCard), {
+  ssr: false,
+  loading: () => (
+    <div className="h-[620px] flex justify-center items-center">Loading...</div>
+  ),
+});
