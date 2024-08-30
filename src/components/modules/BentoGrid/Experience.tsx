@@ -12,7 +12,7 @@ import totalCorporateExperience from "@/lib/calculateTotalExperience";
 import { motion, useInView } from "framer-motion";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { experienceData } from "../../../../constants/data";
+import { experienceData } from "../../../constants/data";
 
 const Experience = () => {
   const [totalExpText, setTotalExpText] = useState<string>("");

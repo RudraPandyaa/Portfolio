@@ -1,4 +1,5 @@
 import { VariantSwitch } from "@/components";
+import { ProjectsData } from "@/constants/data";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types";
 import { Menu } from "lucide-react";
@@ -12,45 +13,6 @@ export default function Page({}: Props) {
   //   "A-BTech-Student",
   //   "A-Lover-of-making-things-beautiful",
   // ];
-
-  const ProjectsData: Project[] = [
-    {
-      title: "Kitty Kit",
-      des: "A Frontend Toolkit for all the frontend developers needs",
-      tech: ["Next JS", "Shadcn", "Tailwind"],
-      status: "In Progress",
-    },
-    {
-      title: "Smart Donkey",
-      des: "A Frontend Toolkit for all the frontend developers needs",
-      tech: ["Next JS", "Shadcn", "Tailwind"],
-      status: "On Hold",
-    },
-    {
-      title: "Apex Auto",
-      des: "An All in One saas for Garange owners",
-      tech: ["MUI", "React JS"],
-      status: "Completed",
-    },
-    {
-      title: "Apex Web Booking",
-      des: "A web app for booking car service appontments",
-      tech: ["Next JS", "MUI", "Tailwind"],
-      status: "Completed",
-    },
-    {
-      title: "Apex Admin Panel",
-      des: "An Admin Panel for Apex Auto",
-      tech: ["Crema Admin Panel Theme", "Ant design", "React JS"],
-      status: "Completed",
-    },
-    {
-      title: "AI 3D Talking Avatar Chat  Bot",
-      des: "A 3D Avatar Chat Bot that can speak the chat output with lip sink",
-      tech: ["Three JS", "Next JS", "Azure Speech API", "Tailwind", "Shadcn"],
-      status: "Completed",
-    },
-  ];
 
   return (
     <>

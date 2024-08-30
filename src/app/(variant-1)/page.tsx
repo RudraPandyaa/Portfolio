@@ -1,13 +1,12 @@
-import { MyExperience, NameCard, TechStack } from "@/components";
+import { MyExperience, MyProjects, NameCard, TechStack } from "@/components";
 
 export default function Home() {
   return (
     <>
       <NameCard />
-
       <TechStack />
-
       <MyExperience />
+      <MyProjects />
     </>
   );
 }

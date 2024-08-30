@@ -1,5 +1,5 @@
 import VariantSwitch from "@/components/shared/variant-switch";
-import { navLinks } from "../../../../constants/nav-links";
+import { navLinks } from "../../../constants/nav-links";
 import AlertNote from "./_components/AlertNote";
 import { MobileNavLinks, NavLinks } from "./_components/NavLinks";
 

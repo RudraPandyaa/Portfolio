@@ -1,6 +1,6 @@
 import V3Wrapper from "@/components/shared/v3Wrapper";
 import { cn } from "@/lib/utils";
-import { collageData, experienceData } from "../../../../constants/data";
+import { collageData, experienceData } from "@/constants/data";
 import Subtitle from "@/components/shared/subtitle";
 import SectionTitle from "@/components/shared/section-title";
 import { Badge } from "@/components/ui/badge";
