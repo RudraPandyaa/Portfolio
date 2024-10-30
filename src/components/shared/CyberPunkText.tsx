@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const CyberpunkText = ({ text = "CYBER 2024" }) => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
