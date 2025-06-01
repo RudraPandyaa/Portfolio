@@ -4,6 +4,7 @@ import "../globals.css";
 import { ThemeProvider } from "@/components/providers";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
+import SplashCursor from "@/Animations/SplashCursor/SplashCursor";
 const Footer = dynamic(() => import("@/components/modules/Footer/Footer"));
 const NavigationBar = dynamic(
   () => import("@/components/modules/Navbar/Navbar")
@@ -34,6 +35,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavigationBar />
+          <SplashCursor />
           {children}
           <Footer />
         </ThemeProvider>
