@@ -27,18 +27,11 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={cn(
-          "bg-page-gradient relative  antialiased dark:bg-page-gradient",
+          "bg-page-gradient relative  antialiased dark:bg-page-gradient dark",
           poppins.className
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

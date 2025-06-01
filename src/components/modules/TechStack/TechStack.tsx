@@ -1,139 +1,275 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-
+import { motion, useInView, Variants } from "framer-motion";
+import { useRef, useState } from "react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@iconify-icon/react";
-import dynamic from "next/dynamic";
 
-const TechStack = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+// Types
+interface IconSize {
+  fontSize: string;
+}
 
-  const langIconSize = {
-    fontSize: "70px",
-  };
-  4;
-  const mobileLangIconSize = {
-    fontSize: "60px",
-  };
-  const frameWorkIconSize = {
-    fontSize: "50px",
-  };
+interface TechItem {
+  name: string;
+  icon: string;
+  category: "language" | "framework" | "library";
+  color: string;
+}
 
-  const mobileFrameWorkIconSize = {
-    fontSize: "50px",
-  };
+// Animation variants
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
-  const libraryIconSize = {
-    fontSize: "66px",
-  };
+const iconVariants: Variants = {
+  hidden: {
+    scale: 0,
+    rotate: -180,
+  },
+  visible: {
+    scale: 1,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 20,
+    },
+  },
+};
 
-  const mobileLibraryIconSize = {
-    fontSize: "46px",
-  };
+// Constants
+const ICON_SIZES = {
+  desktop: {
+    language: { fontSize: "75px" },
+    framework: { fontSize: "75px" },
+    library: { fontSize: "70px" },
+  },
+  mobile: {
+    language: { fontSize: "65px" },
+    framework: { fontSize: "55px" },
+    library: { fontSize: "50px" },
+  },
+} as const;
 
-  const techStack = [
-    "TypeScript",
-    "Next JS",
-    "React Js",
-    "Svelte",
-    "Ionic",
-    "Tailwind CSS",
-  ] as const;
+const TECH_STACK: TechItem[] = [
+  {
+    name: "TypeScript",
+    icon: "skill-icons:typescript",
+    category: "language",
+    color: "#3178C6",
+  },
+  {
+    name: "JavaScript",
+    icon: "skill-icons:javascript",
+    category: "language",
+    color: "#F7DF1E",
+  },
+  {
+    name: "Java",
+    icon: "skill-icons:java-dark",
+    category: "language",
+    color: "#ED8B00",
+  },
+  {
+    name: "Go",
+    icon: "skill-icons:golang",
+    category: "language",
+    color: "#00ADD8",
+  },
+  {
+    name: "Next.js",
+    icon: "devicon:nextjs",
+    category: "framework",
+    color: "#000000",
+  },
+  {
+    name: "React",
+    icon: "logos:react",
+    category: "framework",
+    color: "#61DAFB",
+  },
+  {
+    name: "Ionic",
+    icon: "logos:ionic-icon",
+    category: "framework",
+    color: "#3880FF",
+  },
+  {
+    name: "Svelte",
+    icon: "devicon:svelte",
+    category: "framework",
+    color: "#FF3E00",
+  },
+  {
+    name: "Ant Design",
+    icon: "logos:ant-design",
+    category: "library",
+    color: "#0170FE",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "devicon:tailwindcss",
+    category: "library",
+    color: "#06B6D4",
+  },
+  {
+    name: "shadcn/ui",
+    icon: "simple-icons:shadcnui",
+    category: "library",
+    color: "#000000",
+  },
+  {
+    name: "Material-UI",
+    icon: "simple-icons:mui",
+    category: "library",
+    color: "#007FFF",
+  },
+];
+
+const TechIcon: React.FC<{
+  name: string;
+  icon: string;
+  iconSize: IconSize;
+  color: string;
+  showLabel?: boolean;
+}> = ({ name, icon, iconSize, color, showLabel = false }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.div
-      ref={ref}
-      initial={{
-        opacity: 0,
-        y: 100,
+      variants={iconVariants}
+      whileHover={{
+        scale: 1.1,
+        transition: { type: "spring", stiffness: 400, damping: 10 },
       }}
-      animate={
-        isInView && {
-          opacity: 1,
-          y: 0,
-        }
-      }
-      transition={{
-        duration: 0.4,
-      }}
-      className="text-center text-2xl font-bold"
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      className="relative group cursor-pointer"
     >
-      <div className="h-full grid xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-14 md:px-32 px-0">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-rose-50">Languages</CardTitle>
-          </CardHeader>
-          <div className="p-5 md:flex justify-center gap-5 hidden">
-            <Icon icon="skill-icons:typescript" style={langIconSize} />
-            <Icon icon="skill-icons:javascript" style={langIconSize} />
-            <Icon icon="skill-icons:java-dark" style={langIconSize} />
-            <div className="bg-zinc-900 rounded-2xl h-[4.2rem]">
-              <Icon icon="mdi:language-c" style={langIconSize} />
-            </div>
-          </div>
-
-          <div className="p-5 md:hidden flex justify-center gap-5">
-            <Icon icon="skill-icons:typescript" style={mobileLangIconSize} />
-            <Icon icon="skill-icons:javascript" style={mobileLangIconSize} />
-            <Icon icon="skill-icons:java-dark" style={mobileLangIconSize} />
-            <div className="bg-zinc-900 rounded-2xl h-[4.2rem]">
-              <Icon icon="mdi:language-c" style={mobileLangIconSize} />
-            </div>
-          </div>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-green-100">Frameworks</CardTitle>
-          </CardHeader>
-          <div
-            className="p-5 md:flex justify-center gap-5 hidden 
-            "
+      <motion.div
+        animate={{
+          y: isHovered ? -5 : 0,
+          transition: { type: "spring", stiffness: 300, damping: 15 },
+        }}
+      >
+        <Icon icon={icon} style={iconSize} />
+        {showLabel && (
+          <motion.h6
+            className="text-sm font-medium mt-2 opacity-80 group-hover:opacity-100"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0.8 }}
           >
-            <Icon icon="devicon:nextjs" style={frameWorkIconSize} />
-            <Icon icon="logos:react" style={frameWorkIconSize} />
-            <Icon icon="logos:ionic-icon" style={frameWorkIconSize} />
-            <Icon icon="devicon:svelte" style={frameWorkIconSize} />
-          </div>
-
-          <div
-            className="p-5 md:hidden justify-center gap-5 flex 
-            "
-          >
-            <Icon icon="devicon:nextjs" style={mobileFrameWorkIconSize} />
-            <Icon icon="logos:react" style={mobileFrameWorkIconSize} />
-            <Icon icon="logos:ionic-icon" style={mobileFrameWorkIconSize} />
-            <Icon icon="devicon:svelte" style={mobileFrameWorkIconSize} />
-          </div>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lime-50">Libraries</CardTitle>
-          </CardHeader>
-          <div
-            className="p-5 hidden md:flex justify-center gap-5 
-            "
-          >
-            <Icon icon="logos:ant-design" style={libraryIconSize} />
-            <Icon icon="simple-icons:shadcnui" style={libraryIconSize} />
-            <Icon icon="devicon:tailwindcss" style={libraryIconSize} />
-            <Icon icon="simple-icons:mui" style={libraryIconSize} />
-          </div>
-
-          <div
-            className="p-5 md:hidden flex justify-center gap-5
-            "
-          >
-            <Icon icon="logos:ant-design" style={mobileLibraryIconSize} />
-            <Icon icon="simple-icons:shadcnui" style={mobileLibraryIconSize} />
-            <Icon icon="devicon:tailwindcss" style={mobileLibraryIconSize} />
-            <Icon icon="simple-icons:mui" style={mobileLibraryIconSize} />
-          </div>
-        </Card>
-      </div>
+            {name}
+          </motion.h6>
+        )}
+      </motion.div>
+      <motion.div
+        className="absolute -inset-2 rounded-xl opacity-0 group-hover:opacity-20"
+        style={{ backgroundColor: color }}
+        animate={{ opacity: isHovered ? 0.2 : 0 }}
+      />
     </motion.div>
+  );
+};
+
+const TechCategory: React.FC<{
+  title: string;
+  titleColor: string;
+  items: TechItem[];
+  category: "language" | "framework" | "library";
+  isVisible: boolean;
+}> = ({ title, titleColor, items, category, isVisible }) => {
+  return (
+    <Card className="backdrop-blur-sm bg-black/40 border-zinc-800/50 hover:bg-black/60 transition-colors duration-300">
+      <CardHeader>
+        <CardTitle
+          className={`${titleColor} text-2xl font-bold tracking-tight`}
+        >
+          {title}
+        </CardTitle>
+      </CardHeader>
+
+      {/* Desktop View */}
+      <motion.div
+        className="p-8 md:flex justify-center gap-8 hidden"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        {items
+          .filter((item) => item.category === category)
+          .map((item) => (
+            <TechIcon
+              key={item.name}
+              name={item.name}
+              icon={item.icon}
+              iconSize={ICON_SIZES.desktop[category]}
+              color={item.color}
+              showLabel={true}
+            />
+          ))}
+      </motion.div>
+
+      {/* Mobile View */}
+      <motion.div
+        className="p-6 md:hidden flex justify-center gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        {items
+          .filter((item) => item.category === category)
+          .map((item) => (
+            <TechIcon
+              key={item.name}
+              name={item.name}
+              icon={item.icon}
+              iconSize={ICON_SIZES.mobile[category]}
+              color={item.color}
+            />
+          ))}
+      </motion.div>
+    </Card>
+  );
+};
+
+const TechStack: React.FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="h-full grid xl:grid-cols-3 lg:grid-cols-2 gap-6 mt-14 md:px-32 px-4">
+        <TechCategory
+          title="Languages"
+          titleColor="text-rose-400"
+          items={TECH_STACK}
+          category="language"
+          isVisible={isInView}
+        />
+        <TechCategory
+          title="Frameworks"
+          titleColor="text-emerald-400"
+          items={TECH_STACK}
+          category="framework"
+          isVisible={isInView}
+        />
+        <TechCategory
+          title="Libraries"
+          titleColor="text-sky-400"
+          items={TECH_STACK}
+          category="library"
+          isVisible={isInView}
+        />
+      </div>
+    </div>
   );
 };
 
