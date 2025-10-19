@@ -13,7 +13,7 @@ interface IconSize {
 interface TechItem {
   name: string;
   icon: string;
-  category: "language" | "framework" | "library";
+  category: "language" | "framework" | "library" | "database";
   color: string;
 }
 
@@ -50,15 +50,18 @@ const ICON_SIZES = {
     language: { fontSize: "75px" },
     framework: { fontSize: "75px" },
     library: { fontSize: "70px" },
+    database: { fontSize: "70px" },
   },
   mobile: {
     language: { fontSize: "65px" },
     framework: { fontSize: "55px" },
     library: { fontSize: "50px" },
+    database: { fontSize: "50px" },
   },
 } as const;
 
 const TECH_STACK: TechItem[] = [
+  // Languages
   {
     name: "TypeScript",
     icon: "skill-icons:typescript",
@@ -72,17 +75,13 @@ const TECH_STACK: TechItem[] = [
     color: "#F7DF1E",
   },
   {
-    name: "Java",
-    icon: "skill-icons:java-dark",
+    name: "Python",
+    icon: "logos:python", 
     category: "language",
-    color: "#ED8B00",
+    color: "#3776AB",
   },
-  {
-    name: "Go",
-    icon: "skill-icons:golang",
-    category: "language",
-    color: "#00ADD8",
-  },
+
+  // Frameworks (Frontend + Backend)
   {
     name: "Next.js",
     icon: "devicon:nextjs",
@@ -96,23 +95,25 @@ const TECH_STACK: TechItem[] = [
     color: "#61DAFB",
   },
   {
-    name: "Ionic",
-    icon: "logos:ionic-icon",
+    name: "Node.js",
+    icon: "skill-icons:nodejs-dark",
     category: "framework",
-    color: "#3880FF",
+    color: "#3C873A",
   },
   {
-    name: "Svelte",
-    icon: "devicon:svelte",
+    name: "Express.js",
+    icon: "simple-icons:express",
     category: "framework",
-    color: "#FF3E00",
+    color: "#FFFFFF",
   },
   {
-    name: "Ant Design",
-    icon: "logos:ant-design",
-    category: "library",
-    color: "#0170FE",
+    name: "NestJS",
+    icon: "devicon:nestjs",
+    category: "framework",
+    color: "#E0234E",
   },
+
+  // Libraries
   {
     name: "Tailwind CSS",
     icon: "devicon:tailwindcss",
@@ -120,16 +121,48 @@ const TECH_STACK: TechItem[] = [
     color: "#06B6D4",
   },
   {
-    name: "shadcn/ui",
-    icon: "simple-icons:shadcnui",
+    name: "Redux Toolkit",
+    icon: "devicon:redux",
+    category: "library",
+    color: "#764ABC",
+  },
+  {
+    name: "Mongoose",
+    icon: "simple-icons:mongoose",
+    category: "library",
+    color: "#880000",
+  },
+  {
+    name: "JWT",
+    icon: "simple-icons:jsonwebtokens",
     category: "library",
     color: "#000000",
   },
+  // {
+  //   name: "GraphQL",
+  //   icon: "logos:graphql",
+  //   category: "library",
+  //   color: "#E10098",
+  // },
+
+  // Databases
   {
-    name: "Material-UI",
-    icon: "simple-icons:mui",
-    category: "library",
-    color: "#007FFF",
+    name: "MongoDB",
+    icon: "devicon:mongodb",
+    category: "database",
+    color: "#47A248",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "devicon:postgresql",
+    category: "database",
+    color: "#336791",
+  },
+  {
+    name: "MySQL",
+    icon: "devicon:mysql",
+    category: "database",
+    color: "#4479A1",
   },
 ];
 
@@ -183,7 +216,7 @@ const TechCategory: React.FC<{
   title: string;
   titleColor: string;
   items: TechItem[];
-  category: "language" | "framework" | "library";
+  category: "language" | "framework" | "library" | "database";
   isVisible: boolean;
 }> = ({ title, titleColor, items, category, isVisible }) => {
   return (
@@ -246,7 +279,7 @@ const TechStack: React.FC = () => {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="h-full grid xl:grid-cols-3 lg:grid-cols-2 gap-6 mt-14 md:px-32 px-4">
+      <div className="h-full grid md:grid-cols-2 gap-6 mt-14 md:px-32 px-4">
         <TechCategory
           title="Languages"
           titleColor="text-rose-400"
@@ -266,6 +299,13 @@ const TechStack: React.FC = () => {
           titleColor="text-sky-400"
           items={TECH_STACK}
           category="library"
+          isVisible={isInView}
+        />
+        <TechCategory
+          title="Databases"
+          titleColor="text-sky-400"
+          items={TECH_STACK}
+          category="database"
           isVisible={isInView}
         />
       </div>

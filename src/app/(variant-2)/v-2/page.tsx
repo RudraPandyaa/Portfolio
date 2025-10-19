@@ -32,7 +32,7 @@ export default function Page({}: Props) {
           </div>
         </header>
         <h1 className="scroll-m-20 text-3xl md:text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Hi there, I&apos;m Faizan
+          Hi there, I&apos;m Rudra
         </h1>
         {/* <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           <FlipWords words={words} /> <br />

@@ -2,47 +2,62 @@
 
 import V3Wrapper from "@/components/shared/v3Wrapper";
 import { cn } from "@/lib/utils";
-import { collageData, experienceData } from "@/constants/data";
+import { collageData, collageDataMCA, experienceData } from "@/constants/data";
 import Subtitle from "@/components/shared/subtitle";
 import SectionTitle from "@/components/shared/section-title";
 import { Badge } from "@/components/ui/badge";
 import React from "react";
 
 const TOOLS = [
-  "zustand",
-  "tanstack query",
-  "lodash",
-  "dayjs",
-  "tailwind",
-  "zod",
-  "stripe",
-  "redux",
-  "theme forest",
-  "comet chat",
-  "drag and drop",
-  "calendar view",
+  "TanStack Query",
+  "Redux Toolkit",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Axios",
+  "Mongoose",
+  "Prisma",
+  "Type ORM",
+  "JWT",
+  "Postman",
+  "Render",
+  "Vercel",
+  "OpenAI API",
+  "Git & GitHub"
 ];
 
+
 const FEATURES = [
-  "Stripe Payment Integration",
-  "Drag and Drop",
-  "Calendar View",
-  "Comet Chat Integration",
-  "Next Auth",
+  "JWT Authentication",
+  "Role-based Access Control",
+  "File Uploads & Cloud Storage",
+  "Responsive UI with Tailwind",
+  "Google OAuth Login"
+];
+
+const MCA_SUBJECTS = [
+  "Full Stack Web Development",
+  "Software Testing Quality Management",
+  "Data Warehousing & Mining",
+  "Scientific Research Methods",
+  "Machine Learning",
 ];
 
 const SUBJECTS = [
-  "Data Structures",
-  "Algorithms",
-  "Database Management System",
-  "Operating System",
+  "Data Structures and Algorithms",
+  "Database Management Systems",
+  "Operating Systems",
   "Computer Networks",
+  "Artificial Intelligence",
+  "Machine Learning",
 ];
 
-const EVENTS = [
-  "Hack for India Hackathon",
-  "IIM Red Brick Summit MUN 2022",
-  "Google Developer Student Club Events",
+
+const MCA_EVENTS = [
+  "ODDO Workshop and tech community events"
+];
+
+const BCA_EVENTS = [
+  "Academic projects and coding sessions"
 ];
 
 // 🔁 Reusable BadgeList Component
@@ -112,8 +127,8 @@ export default function MyExperience() {
             <InfoSection
               title={experienceData[0].subRoles[0].role}
               subtitle={experienceData[0].company}
-              duration="April 2023 - Present"
-              badgesTitle="Actively engaged in contributing to live projects using:"
+              duration="May 2024 - May 2025"
+              badgesTitle="Contributed to live projects using:"
               badgeItems={TOOLS}
               badgeStyle="bg-violet-800 text-violet-200"
               containerStyle="md:text-end w-full"
@@ -131,9 +146,30 @@ export default function MyExperience() {
 
             {/* 🎓 Education Section */}
             <InfoSection
+              title={collageDataMCA.degreeShort}
+              subtitle={collageDataMCA.collage}
+              duration={`${collageDataMCA.startDate} - ${collageDataMCA.endDate}`}
+              badgesTitle="Studying Subjects like"
+              badgeItems={MCA_SUBJECTS}
+              badgeStyle="bg-[#b9d2d2] text-[#0d4644]"
+              containerStyle="w-full"
+              textStyle="text-[#0d4644]"
+              extraContent={
+                <div>
+                  <h3>₪ Participating in</h3>
+                  <BadgeList
+                    items={MCA_EVENTS}
+                    className="bg-[#b9d2d2] text-[#0d4644]"
+                  />
+                  <h3>₪ Collaborating with ambitious peers</h3>
+                </div>
+              }
+            />
+
+            <InfoSection
               title={collageData.degreeShort}
               subtitle={collageData.collage}
-              duration="July 2022 - Present"
+              duration="July 2022 - June 2025"
               badgesTitle="Studied Subjects like"
               badgeItems={SUBJECTS}
               badgeStyle="bg-[#b9d2d2] text-[#0d4644]"
@@ -143,10 +179,10 @@ export default function MyExperience() {
                 <div>
                   <h3>₪ Participated in</h3>
                   <BadgeList
-                    items={EVENTS}
+                    items={BCA_EVENTS}
                     className="bg-[#b9d2d2] text-[#0d4644]"
                   />
-                  <h3>₪ Making connections with ambitious people</h3>
+                  <h3>₪ Developed teamwork and problem-solving skills</h3>
                 </div>
               }
             />

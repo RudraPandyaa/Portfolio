@@ -7,7 +7,7 @@ export default function DownloadResumeBtn({}: Props) {
   return (
     <Link
       href={
-        "https://drive.google.com/file/d/1d0y5BGVuvyaQoaphbVKOXPJm8DYpPbuW/view?usp=sharing"
+        "https://drive.google.com/file/d/13MLaKCAGCF949tyIj_pyQv81d3J9U5wg/view?usp=sharing"
       }
       target="_blank"
       className={buttonVariants({

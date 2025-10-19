@@ -51,10 +51,9 @@ const Experience = () => {
                 </CardDescription>
               </CardHeader>
               <div
-                className="grid xl:grid-cols-2
-               lg:grid-cols-2  md:grid-cols-1
-               sm:grid-cols-1
-              gap-4 md:px-6 pb-4"
+                className="grid place-items-center 
+                xl:grid-cols-1 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 
+                gap-4 md:px-6 pb-4"
               >
                 <Card className="px-2 py-5 bg-[#9ecac9] text-[#0d4644]">
                   <CardHeader>
@@ -65,30 +64,32 @@ const Experience = () => {
                       Devstree IT Services
                     </CardTitle>
                     <CardDescription className="px-2 py-2 text-teal-800">
-                      {experienceData[0].subRoles[0].role} | April 2023 -
-                      Present <br />
+                      {experienceData[0].subRoles[0].role} | May 2024 -
+                      May 2025 <br />
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="text-lg text-start">
                     <div>
-                      Actively engaged in contributing to
+                      Contributed to live,{" "}
+                      <span className="text-black"> production-quality projects</span> during
+                      my internship at{" "}
+                      <span className="text-black">Devstree IT Services</span>. Concentrated on
+                      applying <span className="text-black">Clean Code</span> guidelines to
+                      increase software{" "}
                       <span className="text-black">
-                        {" "}
-                        large-scale live projects{" "}
-                      </span>{" "}
-                      , where I focus on implementing{" "}
-                      <span className="text-black">Clean Code</span> principles
-                      to ensure the robustness and maintainability of the
-                      software dedicated to achieving client satisfaction by
-                      translating project requirements into{" "}
-                      <span className="text-black">
-                        efficient and effective{" "}
-                      </span>{" "}
-                      code solutions
+                        scalability, maintainability, and performance
+                      </span>
+                      . Coordinated with{" "}
+                      <span className="text-black">lead developers</span> to convert client's
+                      requirements into{" "}
+                      <span className="text-black">efficient, high-quality code</span> and
+                      delivered project milestones timely with{" "}
+                      <span className="text-black">technical excellence</span>.
                     </div>
                   </CardContent>
+
                 </Card>
-                <Card className="px-2 py-5 bg-violet-200 text-violet-800">
+                {/* <Card className="px-2 py-5 bg-violet-200 text-violet-800">
                   <CardHeader>
                     <CardTitle
                       className="px-2 py-2 
@@ -111,7 +112,7 @@ const Experience = () => {
                       a seamless and efficient customer experience.
                     </div>
                   </CardContent>
-                </Card>
+                </Card> */}
               </div>
             </div>
           </div>

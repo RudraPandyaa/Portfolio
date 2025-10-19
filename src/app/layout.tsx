@@ -11,10 +11,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Faizanahmed | v8",
-    template: "%s | Faizanahmed-v8",
+    default: "Rudra",
+    template: "%s | Rudra",
   },
-  description: "V8 Of My Portfolio",
+  description: "My Portfolio",
   keywords: ["nextjs", "typescript", "tailwindcss"],
 };
 

@@ -19,9 +19,9 @@ export const navLinks = [
     href: "/education",
     text: "Education",
   },
-  {
-    icon: <FluentEmojiFlatMemo />,
-    href: "https://faizanahmed.hashnode.dev/",
-    text: "Blogs",
-  },
+  // {
+  //   icon: <FluentEmojiFlatMemo />,
+  //   href: "https://faizanahmed.hashnode.dev/",
+  //   text: "Blogs",
+  // },
 ] as const;

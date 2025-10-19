@@ -2,49 +2,58 @@ import { Project } from "@/types";
 
 export const collageData = {
   collage: "Silver Oak University",
-  degree: "Bachelor of Technology in Information Technology",
-  degreeShort: "B.Tech Information Technology",
+  degree: "Bachelor of Computer Application",
+  degreeShort: "BCA",
   startDate: "June 2022",
-  endDate: "June 2026",
+  endDate: "June 2025",
+} as const;
+
+export const collageDataMCA = {
+  collage: "Indus University",
+  degree: "Master of Computer Application",
+  degreeShort: "MCA",
+  startDate: "July 2025",
+  endDate: "Present",
 } as const;
 
 export const schoolData = [
   {
-    school: "Ankur High School",
-    degree: "Higher Secondary School Certificate",
+    school: "N.M. High School",
+    degree: "12th Commerce (H.S.C.)",
     startDate: "",
-    endDate: "",
+    endDate: "March 2022",
   },
   {
-    school: "Ankur High School",
-    degree: "Secondary School Certificate",
-    startDate: "June 2010",
-    endDate: "June 2022",
+    school: "N.M. High School",
+    degree: "10th (S.S.C.)",
+    startDate: "",
+    endDate: "March 2020",
   },
 ] as const;
+
 
 export const skillBasedEducationData = [
   {
     title: "MERN Stack Web Development Bootcamp by Angela Yu",
-    startDate: "April 2023",
-    endDate: "Present",
+    startDate: "May 2024",
+    endDate: "May 2025",
   },
   {
     title: "Lorem ipsum dolor sit amet consectetur.",
-    startDate: "April 2023",
-    endDate: "Present",
+    startDate: "May 2024",
+    endDate: "May 2025",
   },
 ] as const;
 
 export const experienceData = [
   {
     company: "Devstree IT Services",
-    role: "Jr Software Developer",
-    startDate: "April 2022",
-    endDate: "Present",
+    role: "Software Intern",
+    startDate: "May 2024",
+    endDate: "May 2025",
     subRoles: [
       {
-        role: "Junior Software Developer",
+        role: "Ex Software Intern",
         skills: [
           "Next JS",
           "React Js",
@@ -53,18 +62,18 @@ export const experienceData = [
           "Material Ui",
           "Tailwind Css",
         ],
-        startDate: "July 2023",
-        endDate: "Present",
-        duration: "8 Months", //TODO: MAke this dynamic later
+        startDate: "May 2024",
+        endDate: "May 2025",
+        duration: "1 year", //TODO: MAke this dynamic later
         description:
           "Actively engaged in contributing to //large-scale live projects// , where I focus on implementing Clean Code principles to ensure the robustness and maintainability of the software  dedicated to achieving client satisfaction by translating project requirements into efficient and effective code solutions",
       },
       {
         role: "React / Ionic Trainee",
         skills: ["Ionic Framework", "React Js", "Javascript", "Bootstrap"],
-        startDate: "April 2023",
-        endDate: "June 2023",
-        duration: "3 Months", //TODO: MAke this dynamic later
+        startDate: "May 2024",
+        endDate: "May 2025",
+        duration: "1 year", //TODO: MAke this dynamic later
         description: "Training in Ionic and React building practice projects",
       },
       {},
@@ -84,23 +93,25 @@ export const line =
 
 export const ProjectsData: Project[] = [
   {
-    title: "Kitty Kit",
-    des: "A Frontend Toolkit for all the frontend developers needs",
-    tech: ["Next JS", "Shadcn", "Tailwind"],
-    status: "In Progress",
-    href: "https://kitty-kit.vercel.app/",
+    title: "FitFolio",
+    des: "Build an AI-powered Resume Analyzer with React, React Router, and Puter.js! Upload candidate resumes and automatically evaluate them using AI.",
+    tech: ["React JS", "Puter.js", "Tailwind"],
+    status: "Completed",
+    href: "https://fitfolio.vercel.app/",
   },
   {
-    title: "Smart Donkey",
-    des: "An Educational Platform for learning new life skills like finance, self defence , etc",
-    tech: ["Next JS", "Shadcn", "Tailwind"],
-    status: "On Hold",
+    title: "Plan-goo",
+    des: "Plan-Goo lets users create and organize travel plans with trip details, timelines, and photo galleries.",
+    tech: ["Next JS", "Prisma", "NextAuth.js"],
+    status: "Completed",
+    href: "https://plan-goo.vercel.app/",
   },
   {
-    title: "Car Import Export Portal",
-    des: "Landing Page, SAAS and Admin Panel for Car Import Export Business",
-    tech: ["Next JS", "Ant Design", "Redux"],
-    status: "In Progress",
+    title: "RephraseAI",
+    des: "AI-powered text editor that corrects grammar and spelling, providing users with accurate, refined sentences",
+    tech: ["React JS", "Express.js + Node.js", "OpenAI API"],
+    status: "Completed",
+    href: "https://rephrase--ai.vercel.app/",
   },
   {
     title: "SAAS For Garange Owners",

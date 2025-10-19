@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const AnimatedName = () => {
   const pretext = "Hey I am ";
-  const text = "F a i z a n a h m e d".split(" ");
+  const text = "R u d r a".split(" ");
 
   return (
     <div className="flex">

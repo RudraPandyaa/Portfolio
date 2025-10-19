@@ -14,13 +14,13 @@ const Footer = () => {
           <div className="w-full">
             <div className="text-sm px-16 md:px-4 flex justify-center items-center text-center flex-col md:flex-row ">
               &copy; {new Date().getFullYear()} Made with ❤️‍🔥{" "}
-              <Link href={"https://www.faizanahmed.in"}>
-                <div className="hover:text-white">by Faizanahmed Saiyed</div>
-              </Link>
+              {/* <Link> */}
+                <div className="hover:text-white">by Rudra Pandya</div>
+              {/* </Link> */}
             </div>
             <div className="mt-4 text-zinc-400">
               <Link
-                href="https://github.com/Faizanahmedsy"
+                href="https://github.com/RudraPandyaa"
                 className="mx-2 text-sm  hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -28,7 +28,7 @@ const Footer = () => {
                 GitHub
               </Link>
               <Link
-                href="https://www.linkedin.com/in/faizanahmed-saiyed/"
+                href="https://www.linkedin.com/in/rudra-pandyaa/"
                 className="mx-2 text-sm  hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -36,11 +36,15 @@ const Footer = () => {
                 LinkedIn
               </Link>
               <Link
-                href="mailto:saiyed.faizanahmed1@gmail.com"
-                className="mx-2 text-sm  hover:text-white"
-              >
-                Gmail
-              </Link>
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=viralpandya079@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2 text-sm hover:text-white"
+            >
+              Gmail
+            </Link>
+
+
             </div>
           </div>
           <div className="w-full flex md:justify-end justify-center py-5 md:py-0">

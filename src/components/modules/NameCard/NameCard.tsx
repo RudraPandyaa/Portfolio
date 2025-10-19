@@ -1,3 +1,5 @@
+'use client';
+
 import { UiWrapper } from "@/components/shared";
 import { Card } from "@/components/ui/card";
 import AnimatedName from "./_components/AnimatedName";
@@ -8,6 +10,7 @@ import dynamic from "next/dynamic";
 import AnimatedTextV2 from "@/components/shared/AnimatedTextV2";
 import AnimatedText from "@/components/shared/AnimatedText";
 import CyberpunkText from "@/components/shared/CyberPunkText";
+import { Typewriter } from 'react-simple-typewriter'
 
 const NameCard = () => {
   const getGreeting = () => {
@@ -31,10 +34,20 @@ const NameCard = () => {
           <h1 className="flex font-bold text-center text-4xl  sm:text-4xl xl:text-6xl md:text-5xl lg:text-5xl  animate-fade-in [--ani-delay:200ms] opacity-0 translate-y-[-1rem]">
             <AnimatedName />
           </h1>
-          <h2 className="flex font-bold text-center xl:text-3xl md:text-2xl text-sm animate-fade-in [--ani-delay:2000ms] opacity-0 translate-y-[-1rem] text-slate-500">
-            a Frontend Developer
+          <h2 className="flex font-bold text-center xl:text-3xl md:text-2xl text-sm text-slate-500">
+            a{' '}
+            <span className="ml-2">
+              <Typewriter
+              words={['Frontend Developer', 'Backend Developer', 'Full Stack Developer']}
+              loop={true}
+              cursor
+              cursorStyle="_"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1500}
+              />
+            </span>
           </h2>
-
           <div className={styles.topBlur} />
           <div className={styles.bottomBlur} />
         </div>
