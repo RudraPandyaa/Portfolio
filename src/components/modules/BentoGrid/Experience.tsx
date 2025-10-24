@@ -80,7 +80,7 @@ const Experience = () => {
                         scalability, maintainability, and performance
                       </span>
                       . Coordinated with{" "}
-                      <span className="text-black">lead developers</span> to convert client's
+                      <span className="text-black">lead developers</span> to convert client&apos;s
                       requirements into{" "}
                       <span className="text-black">efficient, high-quality code</span> and
                       delivered project milestones timely with{" "}
