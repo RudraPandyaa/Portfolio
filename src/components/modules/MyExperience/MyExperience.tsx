@@ -53,7 +53,8 @@ const SUBJECTS = [
 
 
 const MCA_EVENTS = [
-  "ODDO Workshop and tech community events"
+  "ODDO Workshop and tech community events",
+  "Gujarat’s first AI Meetup focused on AI innovation and the regional startup ecosystem."
 ];
 
 const BCA_EVENTS = [
@@ -165,6 +166,7 @@ export default function MyExperience() {
                 </div>
               }
             />
+            
 
             <InfoSection
               title={collageData.degreeShort}

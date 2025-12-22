@@ -1,4 +1,4 @@
-import VariantSwitch from "@/components/shared/variant-switch";
+// import VariantSwitch from "@/components/shared/variant-switch";
 import { navLinks } from "../../../constants/nav-links";
 import AlertNote from "./_components/AlertNote";
 import { MobileNavLinks, NavLinks } from "./_components/NavLinks";
@@ -10,7 +10,7 @@ const NavigationBar = () => {
       <div className=" xl:my-2 lg:my-2 bg-orange-200 dark:bg-inherit">
         <nav className="flex flex-col md:flex-row justify-between items-center px-10 py-5">
           <div className="font-mono w-[150px] hidden lg:block">
-            portfolio-v8
+            portfolio
           </div>
 
           <div className="hidden lg:flex gap-x-10 items-center text-sm">
@@ -27,7 +27,7 @@ const NavigationBar = () => {
           <div className="w-[150px]">
             <div className="flex items-center justify-end">
               {/* <ThemeToggle /> */}
-              <VariantSwitch />
+              {/* <VariantSwitch /> */}
             </div>
           </div>
         </nav>

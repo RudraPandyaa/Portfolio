@@ -42,9 +42,15 @@ const EducationCard: React.FC = () => {
         <CardFooter className="flex justify-end">
           <div className="flex justify-between w-full items-center text-sm">
             <div className="text-muted-foreground">View Course</div>
-            <Button variant={"ghost"}>
+             <a
+          href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+            <Button variant="ghost">
               <ExternalLink size={20} />
             </Button>
+          </a>
           </div>
         </CardFooter>
       </Card>
@@ -65,9 +71,15 @@ const EducationCard: React.FC = () => {
         <CardFooter className="flex justify-end">
           <div className="flex justify-between w-full items-center text-sm">
             <div className="text-muted-foreground">View Course</div>
-            <Button variant={"ghost"}>
-              <ExternalLink size={20} />
-            </Button>
+             <a
+        href="https://www.udemy.com/course/100-days-of-code/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button variant="ghost">
+          <ExternalLink size={20} />
+        </Button>
+      </a>
           </div>
         </CardFooter>
       </Card>

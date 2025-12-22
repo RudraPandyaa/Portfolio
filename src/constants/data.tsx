@@ -100,11 +100,16 @@ export const ProjectsData: Project[] = [
     href: "https://fitfolio.vercel.app/",
   },
   {
-    title: "Plan-goo",
-    des: "Plan-Goo lets users create and organize travel plans with trip details, timelines, and photo galleries.",
-    tech: ["Next JS", "Prisma", "NextAuth.js"],
+    title: "GenUI",
+    des: "AI-driven web application generating responsive UI components using Gemini models with authentication, theming, and live preview.",
+    tech: [
+      "React JS",
+      "Express.js + Node.js",
+      "MongoDB",
+      "Google Gemini API"
+  ],
     status: "Completed",
-    href: "https://plan-goo.vercel.app/",
+    href: "https://genn-ui.netlify.app/",
   },
   {
     title: "RephraseAI",
@@ -112,12 +117,6 @@ export const ProjectsData: Project[] = [
     tech: ["React JS", "Express.js + Node.js", "OpenAI API"],
     status: "Completed",
     href: "https://rephrase--ai.vercel.app/",
-  },
-  {
-    title: "SAAS For Garange Owners",
-    des: "An All in One saas for Garange owners",
-    tech: ["MUI", "React JS"],
-    status: "Completed",
   },
   {
     title: "Appointment Booking Portal",

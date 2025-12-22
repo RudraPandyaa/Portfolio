@@ -1,27 +1,29 @@
 import { UiWrapper } from "@/components/shared";
 import DownloadResumeBtn from "@/components/shared/DownloadResumeBtn";
-import TryVar2Btn from "@/components/shared/TryVar2Btn";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <UiWrapper>
-      <footer className="md:px-8 md:py-4 pb-4 text-zinc-500">
-        <div className="container flex justify-between text-center flex-col md:flex-row mb-10 md:mb-0">
-          <div className="w-full flex md:justify-start justify-center py-5 md:py-0">
+      <footer className="relative md:px-8 md:py-4 pb-4 text-zinc-500">
+        <div className="container relative flex items-center justify-start mb-10 md:mb-0">
+          
+          {/* Left Section — Download Resume */}
+          <div className="w-auto">
             <DownloadResumeBtn />
           </div>
-          <div className="w-full">
-            <div className="text-sm px-16 md:px-4 flex justify-center items-center text-center flex-col md:flex-row ">
+
+          {/* Center Section — Absolutely centered */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
+            <div className="text-sm flex flex-col md:flex-row justify-center items-center px-4">
               &copy; {new Date().getFullYear()} Made with ❤️‍🔥{" "}
-              {/* <Link> */}
-                <div className="hover:text-white">by Rudra Pandya</div>
-              {/* </Link> */}
+              <div className="hover:text-white ml-1">by Rudra Pandya</div>
             </div>
-            <div className="mt-4 text-zinc-400">
+
+            <div className="mt-3 text-zinc-400 flex justify-center">
               <Link
                 href="https://github.com/RudraPandyaa"
-                className="mx-2 text-sm  hover:text-white"
+                className="mx-2 text-sm hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -29,7 +31,7 @@ const Footer = () => {
               </Link>
               <Link
                 href="https://www.linkedin.com/in/rudra-pandyaa/"
-                className="mx-2 text-sm  hover:text-white"
+                className="mx-2 text-sm hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -40,16 +42,12 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mx-2 text-sm hover:text-white"
-            >
-              Gmail
-            </Link>
-
-
+              >
+                Gmail
+              </Link>
             </div>
           </div>
-          <div className="w-full flex md:justify-end justify-center py-5 md:py-0">
-            <TryVar2Btn />
-          </div>
+
         </div>
       </footer>
     </UiWrapper>
