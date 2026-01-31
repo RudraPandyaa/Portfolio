@@ -1,4 +1,3 @@
-import { VariantSwitch } from "@/components";
 import { ProjectsData } from "@/constants/data";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types";
@@ -21,7 +20,7 @@ export default function Page({}: Props) {
         suppressHydrationWarning
       >
         <header className="flex md:gap-4 justify-between my-10">
-          <VariantSwitch />
+          {/* <VariantSwitch /> */}
           <nav className="hidden md:flex md:gap-4">
             <div>Home</div>
             <div>About</div>

@@ -1,6 +1,5 @@
 export { default as LinearGradient } from "@/components/magicui/linear-gradient";
 export { default as RadialGradient } from "@/components/magicui/radial-gradient";
-export { default as VariantSwitch } from "@/components/shared/variant-switch";
 export { FlipWords } from "@/components/ui/flip-words";
 
 import { NameCard, TechStack } from "@/components/modules";
