@@ -123,6 +123,7 @@ export const ProjectsData: Project[] = [
     des: "Discover top-rated restaurants, hotels, and attractions near you",
     tech: ["React", "Google Maps JavaScript API", "RapidAPI"],
     status: "Completed",
+    href: "https://explorra.netlify.app",
   },
   {
     title: "Admin Panel",
