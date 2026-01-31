@@ -119,9 +119,9 @@ export const ProjectsData: Project[] = [
     href: "https://rephrase--ai.vercel.app/",
   },
   {
-    title: "Appointment Booking Portal",
-    des: "A web app for booking car service appontments",
-    tech: ["Next JS", "MUI", "Tailwind"],
+    title: "Explorra",
+    des: "Discover top-rated restaurants, hotels, and attractions near you",
+    tech: ["React", "Google Maps JavaScript API", "RapidAPI"],
     status: "Completed",
   },
   {
